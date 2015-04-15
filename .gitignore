@@ -1,0 +1,4 @@
+inc
+docroot/sites/all/themes/tns/assets/node_modules
+docroot/sites/all/themes/tns/assets/.sass_cache
+*/.DS_Store

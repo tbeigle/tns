@@ -10,6 +10,7 @@
  */
 function tns_preprocess_html(&$vars) {
   if (empty($vars['classes_array'])) $vars['classes_array'] = array();
+  $vars['tns_path'] = drupal_get_path('theme', 'tns');
   
   // Meta viewport header
   $element = array(
