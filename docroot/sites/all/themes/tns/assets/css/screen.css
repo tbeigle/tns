@@ -1,0 +1,180 @@
+/* Base
+ * -----------------------------------------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif; }
+
+body {
+  margin: 0; }
+
+.copyright {
+  text-align: center;
+  font-size: 11px;
+  color: #3c3c3c; }
+
+#logo {
+  display: block;
+  width: 100%;
+  max-width: 321px;
+  margin: 0 auto 50px; }
+  #logo img {
+    width: 100%; }
+
+/* Pages
+ * -----------------------------------------------------------------------------*/
+.lp-001-content {
+  width: 100%;
+  padding: 55px 20px 16px;
+  background: #28272f;
+  font-size: 0;
+  line-height: 0; }
+  .lp-001-content > .tabs {
+    font-size: 14px;
+    line-height: normal; }
+  .lp-001-content .social-media {
+    width: 100%;
+    max-width: 200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    text-align: center; }
+    .lp-001-content .social-media li {
+      list-style: none;
+      display: inline-block;
+      padding: 0;
+      margin: 0 9% 0 0; }
+      .lp-001-content .social-media li.facebook {
+        margin-right: 11.03%; }
+      .lp-001-content .social-media li.instagram {
+        margin-right: 7.5%; }
+      .lp-001-content .social-media li.spotify {
+        margin-right: 8.5%; }
+      .lp-001-content .social-media li.itunes, .lp-001-content .social-media li:last-child {
+        margin-right: 0; }
+      .lp-001-content .social-media li a {
+        display: block;
+        text-indent: -9999px;
+        overflow: hidden;
+        text-decoration: none;
+        display: block;
+        font-size: 0;
+        text-align: start; }
+        .lp-001-content .social-media li a img {
+          display: block; }
+
+.field-name-field-lp-vid, .field-name-field-lp-img {
+  width: 100%;
+  max-width: 683px;
+  margin: 0 auto 20px; }
+  .field-name-field-lp-vid .player, .field-name-field-lp-img .player {
+    width: 100%; }
+  .field-name-field-lp-vid iframe, .field-name-field-lp-img iframe {
+    display: block;
+    margin: auto; }
+
+.lp-001-bottom {
+  text-align: center;
+  padding-top: 36px;
+  padding-bottom: 36px;
+  background: #080808;
+  font-size: 14px;
+  color: #fff; }
+  .lp-001-bottom .email-newsletter {
+    width: 100%;
+    max-width: 432px;
+    padding: 0 20px;
+    margin: auto;
+    overflow: hidden; }
+    .lp-001-bottom .email-newsletter .block-title {
+      float: left; }
+      @media screen and (max-width: 430px) {
+        .lp-001-bottom .email-newsletter .block-title {
+          float: none;
+          clear: both;
+          margin: 0 0 10px;
+          text-align: left; } }
+      .lp-001-bottom .email-newsletter .block-title h2 {
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 29px; }
+    .lp-001-bottom .email-newsletter .block-content,
+    .lp-001-bottom .email-newsletter .block-content div {
+      margin: 0; }
+    .lp-001-bottom .email-newsletter .block-content {
+      float: left;
+      width: 73.4693%; }
+      @media screen and (max-width: 430px) {
+        .lp-001-bottom .email-newsletter .block-content {
+          float: none;
+          clear: both;
+          width: 100%;
+          text-align: left; } }
+      .lp-001-bottom .email-newsletter .block-content form > div > div {
+        float: left; }
+        .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
+          width: 71.5277%;
+          margin: 0 2.7777%; }
+          @media screen and (max-width: 430px) {
+            .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
+              margin-left: 0; } }
+        .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
+          width: 22.9166%; }
+    .lp-001-bottom .email-newsletter .element-invisible {
+      display: none; }
+    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
+      font-family: "Source Sans Pro"; }
+    .lp-001-bottom .email-newsletter :-moz-placeholder {
+      font-family: "Source Sans Pro"; }
+    .lp-001-bottom .email-newsletter ::-moz-placeholder {
+      font-family: "Source Sans Pro"; }
+    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
+      font-family: "Source Sans Pro"; }
+    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
+      font-size: 11px; }
+    .lp-001-bottom .email-newsletter :-moz-placeholder {
+      font-size: 11px; }
+    .lp-001-bottom .email-newsletter ::-moz-placeholder {
+      font-size: 11px; }
+    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
+      font-size: 11px; }
+    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
+      font-style: italic; }
+    .lp-001-bottom .email-newsletter :-moz-placeholder {
+      font-style: italic; }
+    .lp-001-bottom .email-newsletter ::-moz-placeholder {
+      font-style: italic; }
+    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
+      font-style: italic; }
+    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
+      color: #999; }
+    .lp-001-bottom .email-newsletter :-moz-placeholder {
+      color: #999; }
+    .lp-001-bottom .email-newsletter ::-moz-placeholder {
+      color: #999; }
+    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
+      color: #999; }
+    .lp-001-bottom .email-newsletter input {
+      color: #fff; }
+      .lp-001-bottom .email-newsletter input:link, .lp-001-bottom .email-newsletter input:visited, .lp-001-bottom .email-newsletter input:hover, .lp-001-bottom .email-newsletter input:active, .lp-001-bottom .email-newsletter input:focus {
+        outline: none; }
+      .lp-001-bottom .email-newsletter input[type="text"], .lp-001-bottom .email-newsletter input[type="email"], .lp-001-bottom .email-newsletter input[type="textarea"], .lp-001-bottom .email-newsletter input[type="select"] {
+        display: block;
+        margin: 0;
+        padding: 0 8px 3px;
+        border: 1px solid #494949;
+        background: #151515; }
+      .lp-001-bottom .email-newsletter input[type="text"], .lp-001-bottom .email-newsletter input[type="email"] {
+        width: 100%;
+        height: 29px; }
+      .lp-001-bottom .email-newsletter input[type="submit"] {
+        display: block;
+        height: 29px;
+        width: 100%;
+        background: #134ecf;
+        border: none;
+        font-size: 13px;
+        cursor: pointer; }
+
+/*# sourceMappingURL=screen.css.map */

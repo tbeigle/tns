@@ -1,0 +1,33 @@
+<?php
+/**
+ * @file tns_site.module
+ *
+ * Custom functionality for The New Schematics' website.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function tns_site_form_alter(&$form, &$form_state, $form_id) {
+  if (!empty($form['#node']) && !empty($form['#node']->webform) && strpos($form_id, 'webform_client_form') !== FALSE) {
+    $placeholders = array();
+    
+    foreach ($form['#node']->webform['components'] as $index => &$field) {
+      if (!empty($field['extra']['title_display']) && $field['extra']['title_display'] == 'inline' && empty($field['extra']['placeholder'])) {
+        $field['extra']['placeholder'] = $field['name'];
+      }
+      
+      if (!empty($field['extra']['placeholder'])) {
+        $placeholders[$field['name']] = $field['extra']['placeholder'];
+      }
+    }
+    
+    foreach ($form['submitted'] as &$field) {
+      if (!is_array($field) || empty($field['#type'])) continue;
+      if (!empty($placeholders[$field['#title']])) {
+        $field['#attributes']['placeholder'] = $placeholders[$field['#title']];
+        $field['#title_display'] = 'invisible';
+      }
+    }
+  }
+}

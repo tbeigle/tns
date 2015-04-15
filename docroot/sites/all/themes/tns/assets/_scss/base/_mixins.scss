@@ -1,0 +1,67 @@
+// Mixins
+@mixin noText() {
+  font-size: 0;
+  line-height: 0;
+}
+
+@mixin vendorize($property, $value) {
+  -webkit-#{$property}: $value;
+  -moz-#{$property}: $value;
+  -ms-#{$property}: $value;
+  -o-#{$property}: $value;
+  #{$property}: $value;
+}
+
+@mixin vendorizePlaceholder($property, $value, $pre: '') {
+  #{$pre}::-webkit-input-placeholder {
+    #{$property}: $value;
+  }
+  #{$pre}:-moz-placeholder {
+    #{$property}: $value;
+  }
+  #{$pre}::-moz-placeholder {
+    #{$property}: $value;
+  }
+  #{$pre}:-ms-input-placeholder {
+    #{$property}: $value;
+  }
+}
+
+@mixin clear() {
+  &:before, &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin linkTextOffscreen() {
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  display: block;
+  font-size: 0;
+  text-align: start;
+}
+
+@mixin linkAllStates($property, $value) {
+  &:link, &:visited, &:hover, &:active, &:focus {
+    #{$property}: $value;
+  }
+}
+
+@mixin linkVisited($property, $value) {
+  &:link, &:visited {
+    #{$property}: $value;
+  }
+}
+
+@mixin hoverActiveFocus($property, $value) {
+  &:hover, &:active, &:focus {
+    #{$property}: $value;
+  }
+}

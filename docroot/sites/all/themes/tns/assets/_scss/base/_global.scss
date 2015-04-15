@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 11px;
+  color: $colLpCpyRt;
+}
+
+#logo {
+  display: block;
+  width: 100%;
+  max-width: 321px;
+  margin: 0 auto 50px;
+  
+  img {
+    width: 100%;
+  }
+}

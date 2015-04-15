@@ -1,0 +1,4 @@
+name = The New Schematics Site
+description = Custom module to handle miscellaneous functionality.
+package = TNS
+core = 7.x

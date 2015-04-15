@@ -1,0 +1,33 @@
+name = The New Schematics
+description = Custom theme for The New Schematics website
+core = 7.x
+
+; FEATURES
+features[] = logo
+features[] = favicon
+features[] = main_menu
+features[] = secondary_menu
+features[] = social_media_links
+features[] = site_name
+
+; REGIONS
+regions[nav] = Flyout Navigation
+regions[header] = Header
+regions[highlighted] = Highlighted
+regions[content] = Main Content
+regions[secondary_content] = Secondary Content
+regions[sidebar] = Sidebar
+regions[footer] = Footer
+
+; SCRIPTS
+scripts[] = assets/js/tns.js
+
+; SETTINGS - TOGGLE
+settings[toggle_logo] = 0
+settings[toggle_name] = 1
+settings[toggle_favicon] = 1
+settings[toggle_main_menu] = 0
+settings[toggle_secondary_menu] = 0
+
+; STYLESHEETS
+stylesheets[all][] = assets/css/screen.css
