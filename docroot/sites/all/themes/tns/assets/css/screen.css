@@ -29,6 +29,9 @@ body {
   background: #28272f;
   font-size: 0;
   line-height: 0; }
+  .lp-001-content .messages {
+    font-size: 14px;
+    line-height: normal; }
   .lp-001-content > .tabs {
     font-size: 14px;
     line-height: normal; }
