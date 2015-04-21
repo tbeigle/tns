@@ -1,5 +1,13 @@
 .lp {
   &-001 {
+    &-content,
+    &-bottom {
+      a,
+      input[type="submit"] {
+        @include vendorize(transition, all 500ms);
+      }
+    }
+    
     &-content {
       width: 100%;
       padding: 55px 20px 16px;
@@ -18,12 +26,10 @@
       }
       
       .social-media {
-        //width: 200px;
         width: 100%;
         max-width: 200px;
         padding: 0 20px;
         margin: 0 auto;
-        //overflow: hidden;
         text-align: center;
         
         li {
@@ -34,14 +40,26 @@
           
           &.facebook {
             margin-right: 11.03%;
+            
+            a {
+              @include hoverActiveFocus(background, url('../images/bg-icon-facebook.png') 0 0 no-repeat);
+            }
           }
           
           &.instagram {
             margin-right: 7.5%;
+            
+            a {
+              @include hoverActiveFocus(background, url('../images/bg-icon-instagram.png') 0 0 no-repeat);
+            }
           }
           
           &.spotify {
             margin-right: 8.5%;
+            
+            a {
+              @include hoverActiveFocus(background, url('../images/bg-icon-spotify.png') 0 0 no-repeat);
+            }
           }
           
           &.itunes,
@@ -49,153 +67,193 @@
             margin-right: 0;
           }
           
+          &.itunes {
+            a {
+              @include hoverActiveFocus(background, url('../images/bg-icon-itunes.png') 0 0 no-repeat);
+            }
+          }
+          
+          &.twitter {
+            a {
+              @include hoverActiveFocus(background, url('../images/bg-icon-twitter.png') 0 0 no-repeat);
+            }
+          }
+          
+          &.youtube {
+            a {
+              @include hoverActiveFocus(background, url('../images/bg-icon-youtube.png') 0 0 no-repeat);
+            }
+          }
+          
           a {
+            position: relative;
             display: block;
             @include linkTextOffscreen();
             
             img {
               display: block;
+              opacity: 1;
+            }
+            
+            &:hover,
+            &:active,
+            &:focus {
+              img {
+                opacity: 0;
+              }
+            }
+          }
+        }
+      }
+      
+      .field-name {
+        &-field {
+          &-lp {
+            &-vid,
+            &-img {
+              width: 100%;
+              max-width: 683px;
+              margin: 0 auto 20px;
+              
+              .player {
+                width: 100%;
+              }
+              
+              iframe {
+                display: block;
+                margin: auto;
+              }
             }
           }
         }
       }
     }
-  }
-}
-
-.field-name {
-  &-field {
-    &-lp {
-      &-vid,
-      &-img {
+    
+    &-bottom {
+      padding: {
+        top: 36px;
+        bottom: 36px;
+      }
+      background: $colLpBotBg;
+      font-size: 14px;
+      color: #fff;
+      
+      .email-newsletter {
         width: 100%;
-        max-width: 683px;
-        margin: 0 auto 20px;
+        max-width: 520px;
+        padding: 0 20px;
+        margin: auto;
+        overflow: hidden;
         
-        .player {
-          width: 100%;
-        }
-        
-        iframe {
-          display: block;
-          margin: auto;
-        }
-      }
-    }
-  }
-}
-
-.lp-001-bottom {
-  text-align: center;
-  
-  padding: {
-    top: 36px;
-    bottom: 36px;
-  }
-  background: $colLpBotBg;
-  font-size: 14px;
-  color: #fff;
-  
-  .email-newsletter {
-    width: 100%;
-    max-width: 432px;
-    padding: 0 20px;
-    margin: auto;
-    overflow: hidden;
-    
-    .block-title {
-      float: left;
-      
-      @media screen and (max-width: 430px) {
-        float: none;
-        clear: both;
-        margin: 0 0 10px;
-        text-align: left;
-      }
-      
-      h2 {
-        padding: 0;
-        margin: 0;
-        font: {
-          weight: normal;
-          size: 14px;
-        }
-        line-height: 29px;
-      }
-    }
-    
-    .block-content,
-    .block-content div {
-      margin: 0;
-    }
-    
-    .block-content {
-      float: left;
-      width: 73.4693%;
-      
-      @media screen and (max-width: 430px) {
-        float: none;
-        clear: both;
-        width: 100%;
-        text-align: left;
-      }
-      
-      form > div > div {
-        float: left;
-        
-        &.signup-box {
-          width: 71.5277%;
-          margin: 0 2.7777%;
+        .block-title {
+          float: left;
+          margin-right: 2.0833%;
           
           @media screen and (max-width: 430px) {
-            margin-left: 0;
+            float: none;
+            clear: both;
+            margin: 0 0 12px;
+          }
+          
+          h2 {
+            padding: 0;
+            margin: 0;
+            font: {
+              weight: normal;
+              size: 14px;
+            }
+            line-height: 29px;
           }
         }
         
-        &.form-actions {
-          width: 22.9166%;
+        .block-content,
+        .block-content div {
+          margin: 0;
         }
-      }
-    }
-    
-    .element-invisible {
-      display: none;
-    }
-    
-    @include vendorizePlaceholder(font-family, 'Source Sans Pro');
-    @include vendorizePlaceholder(font-size, 11px);
-    @include vendorizePlaceholder(font-style, italic);
-    @include vendorizePlaceholder(color, $colLpPlHldr);
-    
-    input {
-      @include linkAllStates(outline, none);
-      color: #fff;
-      
-      &[type="text"],
-      &[type="email"],
-      &[type="textarea"],
-      &[type="select"] {
-        display: block;
-        margin: 0;
-        padding: 0 8px 3px;
-        border: 1px solid $colLpSnUpBx;
-        background: #151515;
-      }
-      
-      &[type="text"],
-      &[type="email"] {
-        width: 100%;
-        height: 29px;
-      }
-      
-      &[type="submit"] {
-        display: block;
-        height: 29px;
-        width: 100%;
-        background: $colLpSnUpBxBg;
-        border: none;
-        font-size: 13px;
-        cursor: pointer;
+        
+        .block-content {
+          float: left;
+          width: 76.0416%;
+          
+          form > div > div {
+            float: left;
+            
+            &.name-box {
+              width: 33.7912%;
+            }
+            
+            &.signup-box {
+              width: 45.6043%;
+              margin: 0 1.0989%;
+            }
+            
+            &.form-actions {
+              width: 18.4067%;
+            }
+          }
+          
+          @media screen and (max-width: 430px) {
+            float: none;
+            clear: both;
+            width: 100%;
+            
+            form > div > div {
+              &.name-box {
+                float: none;
+                clear: both;
+                margin: 0 0 6px;
+              }
+              
+              &.signup-box {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+        
+        .element-invisible {
+          display: none;
+        }
+        
+        @include vendorizePlaceholder(font-family, 'Source Sans Pro');
+        @include vendorizePlaceholder(font-size, 11px);
+        @include vendorizePlaceholder(font-style, italic);
+        @include vendorizePlaceholder(color, $colLpPlHldr);
+        
+        input {
+          @include linkAllStates(outline, none);
+          color: #fff;
+          
+          &[type="text"],
+          &[type="email"],
+          &[type="textarea"],
+          &[type="select"] {
+            display: block;
+            margin: 0;
+            padding: 0 8px 3px;
+            border: 1px solid $colLpSnUpBx;
+            background: #151515;
+          }
+          
+          &[type="text"],
+          &[type="email"] {
+            width: 100%;
+            height: 29px;
+          }
+          
+          &[type="submit"] {
+            display: block;
+            height: 29px;
+            width: 100%;
+            background: $colLpSnUpBxBg;
+            border: none;
+            font-size: 13px;
+            cursor: pointer;
+            
+            @include hoverActiveFocus(background, #fff);
+            @include hoverActiveFocus(color, $colLpSnUpBxBg);
+          }
+        }
       }
     }
   }
