@@ -10,7 +10,7 @@
  */
 function tns_preprocess_html(&$vars) {
   if (empty($vars['classes_array'])) $vars['classes_array'] = array();
-  $tns_path = drupal_get_path('theme', 'tns');
+  $tns_path = $vars['tns_path'] = drupal_get_path('theme', 'tns');
   $icons_path = '/' . $tns_path . '/assets/images/icons/';
   
   // Meta viewport header
