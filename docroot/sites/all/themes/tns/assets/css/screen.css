@@ -23,6 +23,14 @@ body {
 
 /* Pages
  * -----------------------------------------------------------------------------*/
+.lp-001-content a,
+.lp-001-content input[type="submit"], .lp-001-bottom a,
+.lp-001-bottom input[type="submit"] {
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  -ms-transition: all 500ms;
+  -o-transition: all 500ms;
+  transition: all 500ms; }
 .lp-001-content {
   width: 100%;
   padding: 55px 20px 16px;
@@ -48,13 +56,26 @@ body {
       margin: 0 9% 0 0; }
       .lp-001-content .social-media li.facebook {
         margin-right: 11.03%; }
+        .lp-001-content .social-media li.facebook a:hover, .lp-001-content .social-media li.facebook a:active, .lp-001-content .social-media li.facebook a:focus {
+          background: url("../images/bg-icon-facebook.png") 0 0 no-repeat; }
       .lp-001-content .social-media li.instagram {
         margin-right: 7.5%; }
+        .lp-001-content .social-media li.instagram a:hover, .lp-001-content .social-media li.instagram a:active, .lp-001-content .social-media li.instagram a:focus {
+          background: url("../images/bg-icon-instagram.png") 0 0 no-repeat; }
       .lp-001-content .social-media li.spotify {
         margin-right: 8.5%; }
+        .lp-001-content .social-media li.spotify a:hover, .lp-001-content .social-media li.spotify a:active, .lp-001-content .social-media li.spotify a:focus {
+          background: url("../images/bg-icon-spotify.png") 0 0 no-repeat; }
       .lp-001-content .social-media li.itunes, .lp-001-content .social-media li:last-child {
         margin-right: 0; }
+      .lp-001-content .social-media li.itunes a:hover, .lp-001-content .social-media li.itunes a:active, .lp-001-content .social-media li.itunes a:focus {
+        background: url("../images/bg-icon-itunes.png") 0 0 no-repeat; }
+      .lp-001-content .social-media li.twitter a:hover, .lp-001-content .social-media li.twitter a:active, .lp-001-content .social-media li.twitter a:focus {
+        background: url("../images/bg-icon-twitter.png") 0 0 no-repeat; }
+      .lp-001-content .social-media li.youtube a:hover, .lp-001-content .social-media li.youtube a:active, .lp-001-content .social-media li.youtube a:focus {
+        background: url("../images/bg-icon-youtube.png") 0 0 no-repeat; }
       .lp-001-content .social-media li a {
+        position: relative;
         display: block;
         text-indent: -9999px;
         overflow: hidden;
@@ -63,20 +84,20 @@ body {
         font-size: 0;
         text-align: start; }
         .lp-001-content .social-media li a img {
-          display: block; }
-
-.field-name-field-lp-vid, .field-name-field-lp-img {
-  width: 100%;
-  max-width: 683px;
-  margin: 0 auto 20px; }
-  .field-name-field-lp-vid .player, .field-name-field-lp-img .player {
-    width: 100%; }
-  .field-name-field-lp-vid iframe, .field-name-field-lp-img iframe {
-    display: block;
-    margin: auto; }
-
+          display: block;
+          opacity: 1; }
+        .lp-001-content .social-media li a:hover img, .lp-001-content .social-media li a:active img, .lp-001-content .social-media li a:focus img {
+          opacity: 0; }
+  .lp-001-content .field-name-field-lp-vid, .lp-001-content .field-name-field-lp-img {
+    width: 100%;
+    max-width: 683px;
+    margin: 0 auto 20px; }
+    .lp-001-content .field-name-field-lp-vid .player, .lp-001-content .field-name-field-lp-img .player {
+      width: 100%; }
+    .lp-001-content .field-name-field-lp-vid iframe, .lp-001-content .field-name-field-lp-img iframe {
+      display: block;
+      margin: auto; }
 .lp-001-bottom {
-  text-align: center;
   padding-top: 36px;
   padding-bottom: 36px;
   background: #080808;
@@ -84,18 +105,18 @@ body {
   color: #fff; }
   .lp-001-bottom .email-newsletter {
     width: 100%;
-    max-width: 432px;
+    max-width: 520px;
     padding: 0 20px;
     margin: auto;
     overflow: hidden; }
     .lp-001-bottom .email-newsletter .block-title {
-      float: left; }
+      float: left;
+      margin-right: 2.0833%; }
       @media screen and (max-width: 430px) {
         .lp-001-bottom .email-newsletter .block-title {
           float: none;
           clear: both;
-          margin: 0 0 10px;
-          text-align: left; } }
+          margin: 0 0 12px; } }
       .lp-001-bottom .email-newsletter .block-title h2 {
         padding: 0;
         margin: 0;
@@ -107,23 +128,27 @@ body {
       margin: 0; }
     .lp-001-bottom .email-newsletter .block-content {
       float: left;
-      width: 73.4693%; }
+      width: 76.0416%; }
+      .lp-001-bottom .email-newsletter .block-content form > div > div {
+        float: left; }
+        .lp-001-bottom .email-newsletter .block-content form > div > div.name-box {
+          width: 33.7912%; }
+        .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
+          width: 45.6043%;
+          margin: 0 1.0989%; }
+        .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
+          width: 18.4067%; }
       @media screen and (max-width: 430px) {
         .lp-001-bottom .email-newsletter .block-content {
           float: none;
           clear: both;
-          width: 100%;
-          text-align: left; } }
-      .lp-001-bottom .email-newsletter .block-content form > div > div {
-        float: left; }
-        .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
-          width: 71.5277%;
-          margin: 0 2.7777%; }
-          @media screen and (max-width: 430px) {
-            .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
-              margin-left: 0; } }
-        .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
-          width: 22.9166%; }
+          width: 100%; }
+          .lp-001-bottom .email-newsletter .block-content form > div > div.name-box {
+            float: none;
+            clear: both;
+            margin: 0 0 6px; }
+          .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
+            margin-left: 0; } }
     .lp-001-bottom .email-newsletter .element-invisible {
       display: none; }
     .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
@@ -179,5 +204,9 @@ body {
         border: none;
         font-size: 13px;
         cursor: pointer; }
+        .lp-001-bottom .email-newsletter input[type="submit"]:hover, .lp-001-bottom .email-newsletter input[type="submit"]:active, .lp-001-bottom .email-newsletter input[type="submit"]:focus {
+          background: #fff; }
+        .lp-001-bottom .email-newsletter input[type="submit"]:hover, .lp-001-bottom .email-newsletter input[type="submit"]:active, .lp-001-bottom .email-newsletter input[type="submit"]:focus {
+          color: #134ecf; }
 
 /*# sourceMappingURL=screen.css.map */
