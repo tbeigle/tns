@@ -126,23 +126,23 @@
   
   <ul class="social-media links-ul">
     <li class="facebook">
-      <a href="http://www.facebook.com/TheNewSchematics" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-facebook.png" alt="Facebook" title="Facebook"></a>
+      <a href="//www.facebook.com/TheNewSchematics" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-facebook.png" alt="Facebook" title="Facebook"></a>
     </li>
     <li class="twitter">
-      <a href="http://www.twitter.com/NewSchematics" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-twitter.png" alt="Twitter" title="Twitter"></a>
+      <a href="//www.twitter.com/NewSchematics" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-twitter.png" alt="Twitter" title="Twitter"></a>
     </li>
     <li class="youtube">
-      <a href="https://www.youtube.com/watch?v=ZgP-dHlOWSA" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-youtube.png" alt="YouTube" title="YouTube"></a>
+      <a href="//youtu.be/TQt65kaeEU0" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-youtube.png" alt="YouTube" title="YouTube"></a>
     </li>
     <li class="instagram">
-      <a href="http://www.instagram.com/TheNewSchematics" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-instagram.png" alt="Instagram" title="Instagram"></a>
+      <a href="//www.instagram.com/TheNewSchematics" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-instagram.png" alt="Instagram" title="Instagram"></a>
     </li>
-    <!-- <li class="spotify">
-      <a href="#" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-spotify.png" alt="Spotify" title="Spotify"></a>
+    <li class="spotify">
+      <a href="//open.spotify.com/album/6BZfV8voWY1y0eD2tBPzTH" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-spotify.png" alt="Spotify" title="Spotify"></a>
     </li>
     <li class="itunes">
-      <a href="#" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-itunes.png" alt="iTunes" title="iTunes"></a>
-    </li> -->
+      <a href="//ow.ly/Mwbyz" target="_blank"><img src="/<?php print $tns_path; ?>/assets/images/icon-itunes.png" alt="iTunes" title="iTunes"></a>
+    </li>
   </ul> <!-- /.social-media /.links-ul -->
 </div> <!-- /.lp-001-content -->
 
