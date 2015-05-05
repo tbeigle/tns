@@ -26,9 +26,8 @@
       }
       
       .social-media {
-        width: 100%;
-        max-width: 200px;
-        padding: 0 20px;
+        width: 200px;
+        padding: 0;
         margin: 0 auto;
         text-align: center;
         
@@ -36,10 +35,10 @@
           list-style: none;
           display: inline-block;
           padding: 0;
-          margin: 0 9% 0 0;
+          margin: 0 18px 0 0;
           
           &.facebook {
-            margin-right: 11.03%;
+            margin-right: 22px;
             
             a {
               @include hoverActiveFocus(background, url('../images/bg-icon-facebook.png') 0 0 no-repeat);
@@ -47,7 +46,7 @@
           }
           
           &.instagram {
-            margin-right: 7.5%;
+            margin-right: 15px;
             
             a {
               @include hoverActiveFocus(background, url('../images/bg-icon-instagram.png') 0 0 no-repeat);
@@ -55,7 +54,7 @@
           }
           
           &.spotify {
-            margin-right: 8.5%;
+            margin-right: 17px;
             
             a {
               @include hoverActiveFocus(background, url('../images/bg-icon-spotify.png') 0 0 no-repeat);

@@ -44,26 +44,25 @@ body {
     font-size: 14px;
     line-height: normal; }
   .lp-001-content .social-media {
-    width: 100%;
-    max-width: 200px;
-    padding: 0 20px;
+    width: 200px;
+    padding: 0;
     margin: 0 auto;
     text-align: center; }
     .lp-001-content .social-media li {
       list-style: none;
       display: inline-block;
       padding: 0;
-      margin: 0 9% 0 0; }
+      margin: 0 18px 0 0; }
       .lp-001-content .social-media li.facebook {
-        margin-right: 11.03%; }
+        margin-right: 22px; }
         .lp-001-content .social-media li.facebook a:hover, .lp-001-content .social-media li.facebook a:active, .lp-001-content .social-media li.facebook a:focus {
           background: url("../images/bg-icon-facebook.png") 0 0 no-repeat; }
       .lp-001-content .social-media li.instagram {
-        margin-right: 7.5%; }
+        margin-right: 15px; }
         .lp-001-content .social-media li.instagram a:hover, .lp-001-content .social-media li.instagram a:active, .lp-001-content .social-media li.instagram a:focus {
           background: url("../images/bg-icon-instagram.png") 0 0 no-repeat; }
       .lp-001-content .social-media li.spotify {
-        margin-right: 8.5%; }
+        margin-right: 17px; }
         .lp-001-content .social-media li.spotify a:hover, .lp-001-content .social-media li.spotify a:active, .lp-001-content .social-media li.spotify a:focus {
           background: url("../images/bg-icon-spotify.png") 0 0 no-repeat; }
       .lp-001-content .social-media li.itunes, .lp-001-content .social-media li:last-child {
