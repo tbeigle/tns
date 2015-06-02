@@ -139,18 +139,20 @@
       
       .email-newsletter {
         width: 100%;
-        max-width: 520px;
+        max-width: 700px;
         padding: 0 20px;
         margin: auto;
         overflow: hidden;
         
         .block-title {
           float: left;
+          width: 20%;
           margin-right: 2.0833%;
           
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 530px) {
             float: none;
             clear: both;
+            width: 100%;
             margin: 0 0 12px;
           }
           
@@ -172,39 +174,59 @@
         
         .block-content {
           float: left;
-          width: 76.0416%;
+          width: 77.9167%;
+          
+          @media screen and (max-width: 530px) {
+            width: 100%;
+          }
           
           form > div > div {
             float: left;
             
+            &.name,
+            &.zip {
+              &-box {
+                width: 23.8461%;
+              }
+            }
+            
             &.name-box {
-              width: 33.7912%;
+              margin-right: 1.0989%;
             }
             
             &.signup-box {
-              width: 45.6043%;
+              width: 36.6043%;
               margin: 0 1.0989%;
             }
             
             &.form-actions {
-              width: 18.4067%;
+              width: 12.4067%;
             }
           }
           
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 530px) {
             float: none;
             clear: both;
             width: 100%;
             
             form > div > div {
-              &.name-box {
-                float: none;
-                clear: both;
-                margin: 0 0 6px;
+              &.name,
+              &.zip {
+                &-box {
+                  float: none;
+                  clear: both;
+                  width: 50%;
+                  margin: 0 0 6px;
+                }
               }
               
               &.signup-box {
+                width: 60%;
                 margin-left: 0;
+              }
+              
+              &.form-actions {
+                width: 20%;
               }
             }
           }

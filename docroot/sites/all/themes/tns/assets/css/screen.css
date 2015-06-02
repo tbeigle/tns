@@ -104,17 +104,19 @@ body {
   color: #fff; }
   .lp-001-bottom .email-newsletter {
     width: 100%;
-    max-width: 520px;
+    max-width: 700px;
     padding: 0 20px;
     margin: auto;
     overflow: hidden; }
     .lp-001-bottom .email-newsletter .block-title {
       float: left;
+      width: 20%;
       margin-right: 2.0833%; }
-      @media screen and (max-width: 430px) {
+      @media screen and (max-width: 530px) {
         .lp-001-bottom .email-newsletter .block-title {
           float: none;
           clear: both;
+          width: 100%;
           margin: 0 0 12px; } }
       .lp-001-bottom .email-newsletter .block-title h2 {
         padding: 0;
@@ -127,27 +129,36 @@ body {
       margin: 0; }
     .lp-001-bottom .email-newsletter .block-content {
       float: left;
-      width: 76.0416%; }
+      width: 77.9167%; }
+      @media screen and (max-width: 530px) {
+        .lp-001-bottom .email-newsletter .block-content {
+          width: 100%; } }
       .lp-001-bottom .email-newsletter .block-content form > div > div {
         float: left; }
+        .lp-001-bottom .email-newsletter .block-content form > div > div.name-box, .lp-001-bottom .email-newsletter .block-content form > div > div.zip-box {
+          width: 23.8461%; }
         .lp-001-bottom .email-newsletter .block-content form > div > div.name-box {
-          width: 33.7912%; }
+          margin-right: 1.0989%; }
         .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
-          width: 45.6043%;
+          width: 36.6043%;
           margin: 0 1.0989%; }
         .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
-          width: 18.4067%; }
-      @media screen and (max-width: 430px) {
+          width: 12.4067%; }
+      @media screen and (max-width: 530px) {
         .lp-001-bottom .email-newsletter .block-content {
           float: none;
           clear: both;
           width: 100%; }
-          .lp-001-bottom .email-newsletter .block-content form > div > div.name-box {
+          .lp-001-bottom .email-newsletter .block-content form > div > div.name-box, .lp-001-bottom .email-newsletter .block-content form > div > div.zip-box {
             float: none;
             clear: both;
+            width: 50%;
             margin: 0 0 6px; }
           .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
-            margin-left: 0; } }
+            width: 60%;
+            margin-left: 0; }
+          .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
+            width: 20%; } }
     .lp-001-bottom .email-newsletter .element-invisible {
       display: none; }
     .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
