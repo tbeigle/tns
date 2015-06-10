@@ -13,11 +13,17 @@ body {
   color: $colLpCpyRt;
 }
 
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 #logo {
   display: block;
-  width: 100%;
-  max-width: 321px;
-  margin: 0 auto 50px;
+  width: 30.2469%;
+  max-width: 392px;
+  //min-width: 321px;
   
   img {
     width: 100%;
