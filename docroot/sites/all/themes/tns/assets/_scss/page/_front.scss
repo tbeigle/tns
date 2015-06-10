@@ -1,0 +1,33 @@
+.front {
+  #logo {
+    position: absolute;
+    left: 70px;
+    top: 70px;
+    z-index: 2;
+  }
+  
+  #page-title {
+    display: none;
+  }
+  
+  .region {
+    &-content {
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  #block-system-main-menu {
+    position: absolute;
+    bottom: 14px;
+  }
+  
+  .field-name-field-lp-img {
+    font-size: 0;
+    line-height: 0;
+    
+    img {
+      display: block;
+    }
+  }
+}
