@@ -10,8 +10,8 @@
  */
 function tns_preprocess_html(&$vars) {
   if (empty($vars['classes_array'])) $vars['classes_array'] = array();
-  $tns_path = $vars['tns_path'] = drupal_get_path('theme', 'tns');
-  $icons_path = '/' . $tns_path . '/assets/images/icons/';
+  $tns_path = $vars['tns_path'] = _tns_path();
+  $icons_path = $tns_path . '/assets/images/icons/';
   
   // Meta viewport header
   $element = array(
@@ -93,5 +93,9 @@ function tns_preprocess_html(&$vars) {
  */
 function tns_preprocess_page(&$vars) {
   $vars['show_title'] = (empty($vars['node']) || $vars['node']->title != '<none>');
-  $vars['tns_path'] = drupal_get_path('theme', 'tns');
+  $vars['tns_path'] = _tns_path();
+}
+
+function _tns_path() {
+  return url(drupal_get_path('theme', 'tns'), array('absolute' => TRUE));
 }
