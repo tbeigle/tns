@@ -73,6 +73,8 @@
  */
 ?>
 
+<div id="headerwrap">
+<div id="header">
 <?php if ($page['nav']): ?>
   <nav id="primary-navigation" class="container">
     <?php print render($page['nav']); ?>
@@ -92,6 +94,8 @@
   <div id="breadcrumb"><?php //print $breadcrumb; ?></div>
   -->
 <?php endif; ?>
+</div> <!-- end #header -->
+</div> <!-- end #headerwrap -->
 
 <?php print $messages; ?>
 

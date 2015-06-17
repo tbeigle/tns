@@ -1,0 +1,14 @@
+name = TNS About Page
+core = 7.x
+package = Features
+version = 7.x-1.0
+project = tns_about_page
+dependencies[] = features
+dependencies[] = image
+dependencies[] = text
+features[features_api][] = api:2
+features[field_base][] = body
+features[field_base][] = field_image
+features[field_instance][] = node-about_page-body
+features[field_instance][] = node-about_page-field_image
+features[node][] = about_page
