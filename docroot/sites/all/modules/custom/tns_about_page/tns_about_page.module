@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TNS About Page feature.
+ */
+
+include_once 'tns_about_page.features.inc';

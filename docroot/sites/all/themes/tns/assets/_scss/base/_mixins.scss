@@ -27,6 +27,12 @@
   }
 }
 
+@mixin vertical-align() {
+  position: relative;
+  top: 50%;
+  @include vendorize(transform, translateY(-50%));
+}
+
 @mixin clear() {
   &:before, &:after {
     content: "\0020";

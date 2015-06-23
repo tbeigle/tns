@@ -95,6 +95,147 @@ img {
       .social-media li a:hover img, .social-media li a:active img, .social-media li a:focus img {
         opacity: 0; }
 
+.region-footer {
+  background: #2f2e2e;
+  width: 100%;
+  z-index: 5; }
+  .region-footer:before, .region-footer:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden; }
+  .region-footer:after {
+    clear: both; }
+  .region-footer #block-block-1 {
+    float: left;
+    height: 100px; }
+    .region-footer #block-block-1 iframe {
+      margin: 10px 0; }
+  .region-footer .email-newsletter {
+    float: right;
+    max-width: 50%;
+    padding: 35px 20px;
+    margin: auto;
+    overflow: hidden; }
+    @media screen and (max-width: 990px) {
+      .region-footer .email-newsletter {
+        padding: 20px 20px; } }
+    .region-footer .email-newsletter .block-title {
+      float: left;
+      width: 20%;
+      margin-right: 2%; }
+      @media screen and (max-width: 530px) {
+        .region-footer .email-newsletter .block-title {
+          float: none;
+          clear: both;
+          width: 100%;
+          margin: 0 0 12px; } }
+      .region-footer .email-newsletter .block-title h2 {
+        padding: 0;
+        margin: 0;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 29px;
+        color: #ffffff; }
+    .region-footer .email-newsletter .block-content,
+    .region-footer .email-newsletter .block-content div {
+      margin: 0; }
+    .region-footer .email-newsletter .block-content {
+      float: left;
+      max-width: 78%; }
+      @media screen and (max-width: 530px) {
+        .region-footer .email-newsletter .block-content {
+          width: 100%; } }
+      .region-footer .email-newsletter .block-content form > div > div {
+        float: left; }
+        .region-footer .email-newsletter .block-content form > div > div.name-box, .region-footer .email-newsletter .block-content form > div > div.zip-box, .region-footer .email-newsletter .block-content form > div > div.signup-box {
+          margin-right: 1%; }
+        .region-footer .email-newsletter .block-content form > div > div.name-box {
+          width: 30%; }
+        .region-footer .email-newsletter .block-content form > div > div.zip-box {
+          width: 16%; }
+        .region-footer .email-newsletter .block-content form > div > div.signup-box {
+          width: 38%; }
+          @media screen and (max-width: 990px) {
+            .region-footer .email-newsletter .block-content form > div > div.signup-box {
+              clear: both; } }
+        .region-footer .email-newsletter .block-content form > div > div.form-actions {
+          width: 12%; }
+      @media screen and (max-width: 530px) {
+        .region-footer .email-newsletter .block-content {
+          float: none;
+          clear: both;
+          width: 100%; }
+          .region-footer .email-newsletter .block-content form > div > div.name-box, .region-footer .email-newsletter .block-content form > div > div.zip-box {
+            float: none;
+            clear: both;
+            width: 50%;
+            margin: 0 0 6px 0; }
+          .region-footer .email-newsletter .block-content form > div > div.signup-box {
+            width: 60%;
+            margin-left: 0; }
+          .region-footer .email-newsletter .block-content form > div > div.form-actions {
+            width: 20%; } }
+    .region-footer .email-newsletter .element-invisible {
+      display: none; }
+    .region-footer .email-newsletter ::-webkit-input-placeholder {
+      font-family: "Source Sans Pro"; }
+    .region-footer .email-newsletter :-moz-placeholder {
+      font-family: "Source Sans Pro"; }
+    .region-footer .email-newsletter ::-moz-placeholder {
+      font-family: "Source Sans Pro"; }
+    .region-footer .email-newsletter :-ms-input-placeholder {
+      font-family: "Source Sans Pro"; }
+    .region-footer .email-newsletter ::-webkit-input-placeholder {
+      font-size: 11px; }
+    .region-footer .email-newsletter :-moz-placeholder {
+      font-size: 11px; }
+    .region-footer .email-newsletter ::-moz-placeholder {
+      font-size: 11px; }
+    .region-footer .email-newsletter :-ms-input-placeholder {
+      font-size: 11px; }
+    .region-footer .email-newsletter ::-webkit-input-placeholder {
+      font-style: italic; }
+    .region-footer .email-newsletter :-moz-placeholder {
+      font-style: italic; }
+    .region-footer .email-newsletter ::-moz-placeholder {
+      font-style: italic; }
+    .region-footer .email-newsletter :-ms-input-placeholder {
+      font-style: italic; }
+    .region-footer .email-newsletter ::-webkit-input-placeholder {
+      color: #999; }
+    .region-footer .email-newsletter :-moz-placeholder {
+      color: #999; }
+    .region-footer .email-newsletter ::-moz-placeholder {
+      color: #999; }
+    .region-footer .email-newsletter :-ms-input-placeholder {
+      color: #999; }
+    .region-footer .email-newsletter input {
+      color: #fff; }
+      .region-footer .email-newsletter input:link, .region-footer .email-newsletter input:visited, .region-footer .email-newsletter input:hover, .region-footer .email-newsletter input:active, .region-footer .email-newsletter input:focus {
+        outline: none; }
+      .region-footer .email-newsletter input[type="text"], .region-footer .email-newsletter input[type="email"], .region-footer .email-newsletter input[type="textarea"], .region-footer .email-newsletter input[type="select"] {
+        display: block;
+        margin: 0;
+        padding: 0 8px 3px;
+        border: 1px solid #494949;
+        background: #151515; }
+      .region-footer .email-newsletter input[type="text"], .region-footer .email-newsletter input[type="email"] {
+        width: 100%;
+        height: 29px; }
+      .region-footer .email-newsletter input[type="submit"] {
+        display: block;
+        height: 29px;
+        width: 100%;
+        background: #134ecf;
+        border: none;
+        font-size: 13px;
+        cursor: pointer; }
+        .region-footer .email-newsletter input[type="submit"]:hover, .region-footer .email-newsletter input[type="submit"]:active, .region-footer .email-newsletter input[type="submit"]:focus {
+          background: #fff; }
+        .region-footer .email-newsletter input[type="submit"]:hover, .region-footer .email-newsletter input[type="submit"]:active, .region-footer .email-newsletter input[type="submit"]:focus {
+          color: #134ecf; }
+
 /* Pages
  * -----------------------------------------------------------------------------*/
 .front #logo {

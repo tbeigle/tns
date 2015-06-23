@@ -1,0 +1,25 @@
+.node-type-about-page {
+  .content {
+    width: 100%;
+  
+    .field-name-field-image {
+      width: 100%;
+      
+      img {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+    
+    blockquote {
+      font-weight: bold;
+      font-size: 1.2em;
+      line-height: 1.6em;
+      width: 80%;
+      margin: 2em auto;
+      border-top: 3px solid #ccc;
+      border-bottom: 3px solid #ccc;
+    }
+  }
+}
