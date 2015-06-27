@@ -1,34 +1,60 @@
 .not-front {
+  font-size: 14px;
+  line-height: 1.7142;
+  color: $colLpCpyRt;
+  
+  p {
+    margin: {
+      top: 1em;
+      bottom: 0;
+    }
+  }
   
   #headerwrap {
-    height: 105px;
-    background-color: $footerBg;
+    //height: 105px;
+    background: url(../images/bg-nav.jpg) 0 0 repeat-x;
     border-bottom: 1px solid #999;
     margin: 0 0 12px 0;
     padding: 10px 0;
+  }
     
-    #header {
-      width: 960px;
-      margin: 0 auto;
-      position: relative;
+  #header {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    padding: 0 10px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  #primary-navigation {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    bottom: 0;
+    width: 100%;
+    max-width: 720px;
+    overflow: hidden;
+  }
+  
+  #block-system-main-menu {
+    .menu {
+      text-align: right;
       
-      @media screen and (max-width: 960px) {
-        width: 100%;
-      }
-          
-      #block-system-main-menu {
-        width: 75%;
-        max-width: 720px;
-        float: right;
-      }
-
-      #logo {
-        display: block;
-        position: absolute;
-        z-index: 2;
-        width: 20%;
+      .leaf {
+        a {
+          font-size: 17px;
+        }
       }
     }
+  }
+
+  #logo {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 20%;
+    max-width: 164px;
   }
   
   #page-title {
@@ -36,7 +62,8 @@
   }
   
   #block-system-main {
-    width: 960px;
+    width: 100%;
+    padding: 0 10px;
     margin: 0 auto;
     
     @media screen and (max-width: 960px) {

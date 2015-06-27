@@ -16,18 +16,25 @@
     text-align: center;
   }
   
-  .menu .leaf{
+  .menu .leaf {
     list-style: none;
     display: inline-block;
     margin: 0 1.08%;
     
     a {
+      display: block;
+      padding: 0 8px;
+      border: 2px solid transparent;
       @include linkAllStates(color, #fff);
       text: {
         transform: uppercase;
         decoration: none;
       }
-      @include hoverActiveFocus(text-decoration, underline);
+      
+      @include hoverActiveFocus(border-color, #fff);
+      &.active {
+        border-color: #fff;
+      }
       
       font: {
         weight: bold;
@@ -42,9 +49,11 @@
 .social-media {
   width: 100%;
   background: #000;
-  padding: 6px 10px;
+  padding: 10px;
   margin: 0 auto;
   text-align: center;
+  font-size: 0;
+  line-height: 0;
   
   li {
     list-style: none;

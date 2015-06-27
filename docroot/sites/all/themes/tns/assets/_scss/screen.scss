@@ -5,8 +5,11 @@
 @import "base/mixins";
 @import "base/global";
 @import "base/nav";
+@import "base/forms";
 
 /* Pages
  * -----------------------------------------------------------------------------*/
+@import "page/notfront";
 @import "page/front";
+@import "page/about";
 @import "page/lp";
