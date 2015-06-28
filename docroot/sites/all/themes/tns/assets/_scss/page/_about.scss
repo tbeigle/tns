@@ -1,32 +1,38 @@
-.node-type-about-page {
+.about-us {
+  #block-system-main {
+    max-width: 980px;
+    margin-bottom: 30px;
+  }
+  
   .content {
     width: 100%;
   
-    .field-name-field-image {
+    .field-name-field-page-image {
       width: 100%;
       
       img {
+        display: block;
         width: 80%;
         margin: 0 auto;
-        display: block;
+      }
+      
+      margin: {
+        bottom: 30px;
       }
     }
     
     blockquote {
       font-weight: bold;
-      font-size: 1.2em;
-      line-height: 1.6em;
+      font-size: 1.125rem;
+      line-height: 1.4;
       width: 80%;
-      margin: 2em auto;
-      /*border-top: 3px solid #ccc;
-      border-bottom: 3px solid #ccc;*/
+      margin: 2rem auto;
+      &:before {
+        @include shortBorderHorizontal();
+      }
       
-      &:before, &:after {
-        content: "";
-        display: block;
-        border-top: 3px solid #ccc;
-        width: 50%;
-        margin: 0 auto;
+      &:after {
+        @include shortBorderHorizontal(true);
       }
     }
   }

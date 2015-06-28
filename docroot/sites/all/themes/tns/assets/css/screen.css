@@ -25,6 +25,9 @@ img {
   #logo img {
     width: 100%; }
 
+#admin-menu .dropdown .admin-menu-icon img {
+  width: 16px; }
+
 #block-system-main-menu {
   width: 100%; }
   #block-system-main-menu .block-title {
@@ -41,6 +44,9 @@ img {
     display: inline-block;
     margin: 0 1.08%; }
     #block-system-main-menu .menu .leaf a {
+      display: block;
+      padding: 0 8px;
+      border: 2px solid transparent;
       text-transform: uppercase;
       text-decoration: none;
       font-weight: bold;
@@ -49,14 +55,18 @@ img {
       #block-system-main-menu .menu .leaf a:link, #block-system-main-menu .menu .leaf a:visited, #block-system-main-menu .menu .leaf a:hover, #block-system-main-menu .menu .leaf a:active, #block-system-main-menu .menu .leaf a:focus {
         color: #fff; }
       #block-system-main-menu .menu .leaf a:hover, #block-system-main-menu .menu .leaf a:active, #block-system-main-menu .menu .leaf a:focus {
-        text-decoration: underline; }
+        border-color: #fff; }
+      #block-system-main-menu .menu .leaf a.active {
+        border-color: #fff; }
 
 .social-media {
   width: 100%;
   background: #000;
-  padding: 6px 10px;
+  padding: 10px;
   margin: 0 auto;
-  text-align: center; }
+  text-align: center;
+  font-size: 0;
+  line-height: 0; }
   .social-media li {
     list-style: none;
     display: inline-block;
@@ -242,6 +252,9 @@ img {
         .region-footer .email-newsletter input[type="submit"]:hover, .region-footer .email-newsletter input[type="submit"]:active, .region-footer .email-newsletter input[type="submit"]:focus {
           color: #134ecf; }
 
+.placeholder-label label {
+  display: none; }
+
 /* Pages
  * -----------------------------------------------------------------------------*/
 .front #logo {
@@ -263,90 +276,89 @@ img {
   .front .field-name-field-lp-img img {
     display: block; }
 
-.not-front #headerwrap {
-  /*min-height: 105px;*/
-  background-color: #2f2e2e;
-  border-bottom: 1px solid #999;
-  margin: 0 0 12px 0;
-  padding: 10px 0; }
-  .not-front #headerwrap:before, .not-front #headerwrap:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden; }
-  .not-front #headerwrap:after {
-    clear: both; }
-  .not-front #headerwrap #header {
-    width: 960px;
+.not-front {
+  font-size: 14px;
+  line-height: 1.7142;
+  color: #3c3c3c; }
+  .not-front p {
+    margin-top: 1em;
+    margin-bottom: 0; }
+  .not-front #headerwrap {
+    background: url(../images/bg-nav.jpg) 0 0 repeat-x;
+    border-bottom: 1px solid #868589;
+    margin: 0 0 12px 0;
+    padding: 10px 0; }
+  .not-front #header {
+    position: relative;
+    width: 100%;
+    max-width: 980px;
+    padding: 0 10px;
     margin: 0 auto;
-    position: relative; }
-    .not-front #headerwrap #header:before, .not-front #headerwrap #header:after {
-      content: "\0020";
-      display: block;
-      height: 0;
-      overflow: hidden; }
-    .not-front #headerwrap #header:after {
-      clear: both; }
+    overflow: hidden; }
+  .not-front #primary-navigation {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    bottom: 0;
+    width: 100%;
+    max-width: 720px;
+    overflow: hidden; }
+  .not-front #block-system-main-menu .menu {
+    text-align: right; }
+    .not-front #block-system-main-menu .menu .leaf a {
+      font-size: 17px; }
+  .not-front #logo {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 20%;
+    max-width: 164px; }
+  .not-front #page-title {
+    display: none; }
+  .not-front #block-system-main {
+    width: 100%;
+    padding: 0 10px;
+    margin: 0 auto; }
     @media screen and (max-width: 960px) {
-      .not-front #headerwrap #header {
-        width: 100%; } }
-    .not-front #headerwrap #header #block-system-main-menu {
-      width: 75%;
-      max-width: 720px;
-      float: right; }
-      .not-front #headerwrap #header #block-system-main-menu:before, .not-front #headerwrap #header #block-system-main-menu:after {
-        content: "\0020";
-        display: block;
-        height: 0;
-        overflow: hidden; }
-      .not-front #headerwrap #header #block-system-main-menu:after {
-        clear: both; }
-      @media screen and (max-width: 530px) {
-        .not-front #headerwrap #header #block-system-main-menu {
-          width: 100%;
-          float: left; } }
-    .not-front #headerwrap #header #logo {
-      display: block;
-      /*position: absolute;*/
-      float: left;
-      /*z-index: 2;*/
-      width: 20%;
-      min-width: 200px;
-      margin-left: 10px; }
-.not-front #page-title {
-  display: none; }
-.not-front #block-system-main {
-  width: 960px;
-  margin: 0 auto; }
-  @media screen and (max-width: 960px) {
-    .not-front #block-system-main {
-      width: 98%; } }
-.not-front .region-content {
-  position: relative;
-  z-index: 1; }
+      .not-front #block-system-main {
+        width: 98%; } }
+  .not-front .region-content {
+    position: relative;
+    z-index: 1; }
 
-.node-type-about-page .content {
+.about-us #block-system-main {
+  max-width: 980px;
+  margin-bottom: 30px; }
+.about-us .content {
   width: 100%; }
-  .node-type-about-page .content .field-name-field-image {
-    width: 100%; }
-    .node-type-about-page .content .field-name-field-image img {
+  .about-us .content .field-name-field-page-image {
+    width: 100%;
+    margin-bottom: 30px; }
+    .about-us .content .field-name-field-page-image img {
+      display: block;
       width: 80%;
-      margin: 0 auto;
-      display: block; }
-  .node-type-about-page .content blockquote {
+      margin: 0 auto; }
+  .about-us .content blockquote {
     font-weight: bold;
-    font-size: 1.2em;
-    line-height: 1.6em;
+    font-size: 1.125rem;
+    line-height: 1.4;
     width: 80%;
-    margin: 2em auto;
-    /*border-top: 3px solid #ccc;
-    border-bottom: 3px solid #ccc;*/ }
-    .node-type-about-page .content blockquote:before, .node-type-about-page .content blockquote:after {
+    margin: 2rem auto; }
+    .about-us .content blockquote:before {
       content: "";
       display: block;
-      border-top: 3px solid #ccc;
-      width: 50%;
-      margin: 0 auto; }
+      width: 350px;
+      height: 4px;
+      background: #d9d9d9;
+      margin: auto; }
+    .about-us .content blockquote:after {
+      content: "";
+      display: block;
+      width: 350px;
+      height: 4px;
+      background: #d9d9d9;
+      margin: auto;
+      margin-top: 1em; }
 
 .lp-001 #logo {
   max-width: 321px;
