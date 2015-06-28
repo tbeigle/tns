@@ -5,19 +5,10 @@
  */
 
 /**
- * Implements hook_node_info().
+ * Implements hook_ctools_plugin_api().
  */
-function tns_about_page_node_info() {
-  $items = array(
-    'about_page' => array(
-      'name' => t('About Page'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Title'),
-      'help' => '',
-    ),
-  );
-  drupal_alter('node_info', $items);
-  return $items;
+function tns_about_page_ctools_plugin_api($module = NULL, $api = NULL) {
+  if ($module == "context" && $api == "context") {
+    return array("version" => "3");
+  }
 }

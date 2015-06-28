@@ -25,6 +25,9 @@ img {
   #logo img {
     width: 100%; }
 
+#admin-menu .dropdown .admin-menu-icon img {
+  width: 16px; }
+
 #block-system-main-menu {
   width: 100%; }
   #block-system-main-menu .block-title {
@@ -254,6 +257,25 @@ img {
 
 /* Pages
  * -----------------------------------------------------------------------------*/
+.front #logo {
+  position: absolute;
+  left: 70px;
+  top: 70px;
+  z-index: 2; }
+.front #page-title {
+  display: none; }
+.front .region-content {
+  position: relative;
+  z-index: 1; }
+.front #block-system-main-menu {
+  position: absolute;
+  bottom: 14px; }
+.front .field-name-field-lp-img {
+  font-size: 0;
+  line-height: 0; }
+  .front .field-name-field-lp-img img {
+    display: block; }
+
 .not-front {
   font-size: 14px;
   line-height: 1.7142;
@@ -263,7 +285,7 @@ img {
     margin-bottom: 0; }
   .not-front #headerwrap {
     background: url(../images/bg-nav.jpg) 0 0 repeat-x;
-    border-bottom: 1px solid #999;
+    border-bottom: 1px solid #868589;
     margin: 0 0 12px 0;
     padding: 10px 0; }
   .not-front #header {
@@ -304,51 +326,32 @@ img {
     position: relative;
     z-index: 1; }
 
-.front #logo {
-  position: absolute;
-  left: 70px;
-  top: 70px;
-  z-index: 2; }
-.front #page-title {
-  display: none; }
-.front .region-content {
-  position: relative;
-  z-index: 1; }
-.front #block-system-main-menu {
-  position: absolute;
-  bottom: 14px; }
-.front .field-name-field-lp-img {
-  font-size: 0;
-  line-height: 0; }
-  .front .field-name-field-lp-img img {
-    display: block; }
-
-.node-type-about-page #block-system-main {
+.about-us #block-system-main {
   max-width: 980px;
   margin-bottom: 30px; }
-.node-type-about-page .content {
+.about-us .content {
   width: 100%; }
-  .node-type-about-page .content .field-name-field-image {
+  .about-us .content .field-name-field-page-image {
     width: 100%;
     margin-bottom: 30px; }
-    .node-type-about-page .content .field-name-field-image img {
+    .about-us .content .field-name-field-page-image img {
       display: block;
       width: 80%;
       margin: 0 auto; }
-  .node-type-about-page .content blockquote {
+  .about-us .content blockquote {
     font-weight: bold;
     font-size: 1.125rem;
     line-height: 1.4;
     width: 80%;
     margin: 2rem auto; }
-    .node-type-about-page .content blockquote:before {
+    .about-us .content blockquote:before {
       content: "";
       display: block;
       width: 350px;
       height: 4px;
       background: #d9d9d9;
       margin: auto; }
-    .node-type-about-page .content blockquote:after {
+    .about-us .content blockquote:after {
       content: "";
       display: block;
       width: 350px;

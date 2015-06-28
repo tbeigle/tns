@@ -75,16 +75,16 @@
 
 <div id="headerwrap">
 <div id="header">
-<?php if ($page['nav']): ?>
-  <nav id="primary-navigation" class="container">
-    <?php print render($page['nav']); ?>
-  </nav>
-<?php endif; ?>
-
 <?php if ($logo): ?>
   <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
     <img src="<?php print $logo; ?>" alt="Logo for The New Schematics" />
   </a>
+<?php endif; ?>
+
+<?php if ($page['nav']): ?>
+  <nav id="primary-navigation" class="container">
+    <?php print render($page['nav']); ?>
+  </nav>
 <?php endif; ?>
 
 <?php print render($page['header']); ?>
