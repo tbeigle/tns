@@ -1,16 +1,18 @@
 .not-front {
   
   #headerwrap {
-    height: 105px;
+    /*min-height: 105px;*/
     background-color: $footerBg;
     border-bottom: 1px solid #999;
     margin: 0 0 12px 0;
     padding: 10px 0;
+    @include clear();
     
     #header {
       width: 960px;
       margin: 0 auto;
       position: relative;
+      @include clear();
       
       @media screen and (max-width: 960px) {
         width: 100%;
@@ -20,13 +22,22 @@
         width: 75%;
         max-width: 720px;
         float: right;
+        @include clear();
+        
+        @media screen and (max-width: 530px) {
+          width: 100%;
+          float: left;
+        }
       }
 
       #logo {
         display: block;
-        position: absolute;
-        z-index: 2;
+        /*position: absolute;*/
+        float: left;
+        /*z-index: 2;*/
         width: 20%;
+        min-width: 200px;
+        margin-left: 10px;
       }
     }
   }

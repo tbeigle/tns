@@ -18,8 +18,16 @@
       line-height: 1.6em;
       width: 80%;
       margin: 2em auto;
-      border-top: 3px solid #ccc;
-      border-bottom: 3px solid #ccc;
+      /*border-top: 3px solid #ccc;
+      border-bottom: 3px solid #ccc;*/
+      
+      &:before, &:after {
+        content: "";
+        display: block;
+        border-top: 3px solid #ccc;
+        width: 50%;
+        margin: 0 auto;
+      }
     }
   }
 }
