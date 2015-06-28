@@ -1,31 +1,38 @@
 <?php
 /**
  * @file
- * tns_about_page.context.inc
+ * tns_front.context.inc
  */
 
 /**
  * Implements hook_context_default_contexts().
  */
-function tns_about_page_context_default_contexts() {
+function tns_front_context_default_contexts() {
   $export = array();
 
   $context = new stdClass();
   $context->disabled = FALSE; /* Edit this to true to make a default context disabled initially */
   $context->api_version = 3;
-  $context->name = 'about';
+  $context->name = 'front';
   $context->description = '';
   $context->tag = 'pages';
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'node/5' => 'node/5',
+        '<front>' => '<front>',
       ),
     ),
   );
   $context->reactions = array(
-    'theme_html' => array(
-      'class' => 'about-us',
+    'block' => array(
+      'blocks' => array(
+        'system-main-menu' => array(
+          'module' => 'system',
+          'delta' => 'main-menu',
+          'region' => 'content',
+          'weight' => '-10',
+        ),
+      ),
     ),
   );
   $context->condition_mode = 0;
@@ -33,7 +40,7 @@ function tns_about_page_context_default_contexts() {
   // Translatables
   // Included for use with string extractors like potx.
   t('pages');
-  $export['about'] = $context;
+  $export['front'] = $context;
 
   return $export;
 }
