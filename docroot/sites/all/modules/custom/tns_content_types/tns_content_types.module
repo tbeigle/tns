@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TNS Content Types feature.
+ */
+
+include_once 'tns_content_types.features.inc';
