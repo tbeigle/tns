@@ -1,0 +1,98 @@
+<?php
+/**
+ * @file tns_bit.module
+ */
+
+define('BIT_APPID', 'thenewschematics_com');
+
+/**
+ * Implements hook_block_info()
+ */
+function tns_bit_block_info() {
+  $items = array();
+  
+  $items['tour'] = array(
+    'info' => t('TNS: Upcoming Tour Dates'),
+  );
+  
+  return $items;
+}
+
+/**
+ * Implements hook_block_view()
+ */
+function tns_bit_block_view($delta = '') {
+  $block = array(
+    'subject' => '',
+    'content' => '',
+  );
+  
+  switch ($delta) {
+    case 'tour': {
+      $block['content'] = array(
+        '#theme' => 'table',
+        '#header' => array(
+          t('Date'),
+          t('Time'),
+          t('Location'),
+          t('Venue'),
+          t('Info'),
+        ),
+        '#rows' => array(),
+      );
+      
+      $events = tns_bit_tour_dates();
+      foreach ($events as $event) {
+        $block['content']['#rows'][] = array(
+          $event['date'],
+          $event['time'],
+          $event['location'],
+          $event['venue'],
+          l('RSVP', $event['url'], array('target' => '_blank', 'attributes' => array('class' => array('rsvp-button')))),
+        );
+      }
+      
+      break;
+    }
+  }
+  
+  return $block;
+}
+
+/**
+ * Gets upcoming tour dates
+ */
+function tns_bit_tour_dates() {
+  $output = array();
+  $bit = tns_bit_obj();
+  $bit->setAPI(BIT_APPID);
+  
+  try {
+    $results = $bit->getEventsForSingleArtist('The New Schematics');
+    
+    // loop through the response
+    foreach($results as $event) {
+      list($date, $time) = explode('|', date('n.j.y|g:i a', strtotime($event->datetime)));
+      $output[] = array(
+        'date' => $date,
+        'time' => $time,
+        'location' => $event->venue->city . ', ' . $event->venue->region,
+        'venue' => $event->venue->name,
+        'url' => $event->url,
+      );
+    }
+  }
+  catch(Exception $e) {
+    watchdog('tns_bit', 'From line ' . __LINE__ . ' in ' . __FILE__ . ', API error message: @msg', array('@msg' => $e->getMessage()), WATCHDOG_ERROR);
+  }
+  
+  return $output;
+}
+
+/**
+ * Returns a BIT class object
+ */
+function tns_bit_obj() {
+  include_once('bit/BIT.php');
+  return new BIT();
+}

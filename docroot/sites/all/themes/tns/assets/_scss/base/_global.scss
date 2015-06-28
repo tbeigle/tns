@@ -39,3 +39,48 @@ img {
     }
   }
 }
+
+#page-title {
+  display: none;
+  margin: 0 0 36px;
+  font-size: 28px;
+  line-height: 1;
+  
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+  
+  color: #fff;
+  
+  &:before,
+  &:after {
+    @include shortBorderHorizontal(false, $gray3);
+    max-width: 50px;
+    height: 1px;
+  }
+  
+  &:before {
+    margin-bottom: 10px;
+  }
+  
+  &:after {
+    margin-top: 10px;
+  }
+}
+
+a {
+  transition: all 0.5s;
+}
+
+.rsvp-button {
+  display: block;
+  background: $orange1;
+  text-align: center;
+  @include linkVisited(color, #fff);
+  @include linkAllStates(text-decoration, none);
+  line-height: 1.4375;
+  
+  @include hoverActiveFocus(background, #fff);
+  @include hoverActiveFocus(color, $orange1);
+}

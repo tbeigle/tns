@@ -28,6 +28,46 @@ img {
 #admin-menu .dropdown .admin-menu-icon img {
   width: 16px; }
 
+#page-title {
+  display: none;
+  margin: 0 0 36px;
+  font-size: 28px;
+  line-height: 1;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff; }
+  #page-title:before, #page-title:after {
+    content: "";
+    display: block;
+    width: 50%;
+    max-width: 350px;
+    height: 4px;
+    background: #7a7a7a;
+    margin: auto;
+    max-width: 50px;
+    height: 1px; }
+  #page-title:before {
+    margin-bottom: 10px; }
+  #page-title:after {
+    margin-top: 10px; }
+
+a {
+  transition: all 0.5s; }
+
+.rsvp-button {
+  display: block;
+  background: #d6aa39;
+  text-align: center;
+  line-height: 1.4375; }
+  .rsvp-button:link, .rsvp-button:visited {
+    color: #fff; }
+  .rsvp-button:link, .rsvp-button:visited, .rsvp-button:hover, .rsvp-button:active, .rsvp-button:focus {
+    text-decoration: none; }
+  .rsvp-button:hover, .rsvp-button:active, .rsvp-button:focus {
+    background: #fff; }
+  .rsvp-button:hover, .rsvp-button:active, .rsvp-button:focus {
+    color: #d6aa39; }
+
 #block-system-main-menu {
   width: 100%; }
   #block-system-main-menu .block-title {
@@ -347,18 +387,70 @@ img {
     .about-us .content blockquote:before {
       content: "";
       display: block;
-      width: 350px;
+      width: 50%;
+      max-width: 350px;
       height: 4px;
       background: #d9d9d9;
       margin: auto; }
     .about-us .content blockquote:after {
       content: "";
       display: block;
-      width: 350px;
+      width: 50%;
+      max-width: 350px;
       height: 4px;
       background: #d9d9d9;
       margin: auto;
       margin-top: 1em; }
+
+body.tour #headerwrap {
+  margin-bottom: 0; }
+body.tour #page-title {
+  display: inline-block; }
+body.tour #contentwrap {
+  text-align: center;
+  padding: 30px 10px 160px;
+  background-image: url(../images/bg-tour.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: 100% auto; }
+body.tour .tour-dates {
+  font-size: 16px; }
+  body.tour .tour-dates table {
+    width: 100%;
+    max-width: 960px;
+    margin: auto;
+    color: #fff;
+    text-align: left; }
+  body.tour .tour-dates thead,
+  body.tour .tour-dates tbody,
+  body.tour .tour-dates th,
+  body.tour .tour-dates td {
+    border: none; }
+  body.tour .tour-dates tbody {
+    border-top: 1px solid #8d8d8d; }
+  body.tour .tour-dates th:nth-child(2),
+  body.tour .tour-dates td:nth-child(2) {
+    width: 24.375%; }
+  body.tour .tour-dates th:nth-child(3),
+  body.tour .tour-dates td:nth-child(3) {
+    width: 29.7916%; }
+  body.tour .tour-dates th:first-child,
+  body.tour .tour-dates td:first-child {
+    width: 11.0416%; }
+  body.tour .tour-dates th:last-child,
+  body.tour .tour-dates td:last-child {
+    width: 5.4166%;
+    padding-right: 0;
+    text-align: center; }
+  body.tour .tour-dates th {
+    text-transform: uppercase;
+    padding-bottom: 16px; }
+  body.tour .tour-dates td {
+    padding-top: 6px;
+    padding-bottom: 10px; }
+  body.tour .tour-dates tr.even, body.tour .tour-dates tr.odd {
+    background: none;
+    border-color: #8d8d8d; }
 
 .lp-001 #logo {
   max-width: 321px;
