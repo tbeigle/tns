@@ -19,7 +19,7 @@ function tns_about_page_context_default_contexts() {
   $context->conditions = array(
     'path' => array(
       'values' => array(
-        'node/4' => 'node/4',
+        'node/5' => 'node/5',
       ),
     ),
   );

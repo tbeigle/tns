@@ -72,12 +72,13 @@
   }
 }
 
-@mixin shortBorderHorizontal($bottom: false) {
+@mixin shortBorderHorizontal($bottom: false, $brdrcol: $colQuoteBorders) {
   content: "";
   display: block;
-  width: 350px;
+  width: 50%;
+  max-width: 350px;
   height: 4px;
-  background: $colQuoteBorders;
+  background: $brdrcol;
   margin: auto;
   
   @if $bottom {

@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TNS Front Page feature.
+ */
+
+include_once 'tns_front.features.inc';

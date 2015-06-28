@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TNS Tour Page feature.
+ */
+
+include_once 'tns_tour.features.inc';
