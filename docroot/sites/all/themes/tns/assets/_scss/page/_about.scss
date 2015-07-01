@@ -1,4 +1,4 @@
-.about-us {
+.basic-internal {
   #block-system-main {
     max-width: 980px;
     margin-bottom: 30px;
@@ -6,8 +6,9 @@
   
   .content {
     width: 100%;
-  
-    .field-name-field-page-image {
+    
+    .field-name-field-page-image,
+    .field-name-field-press-item-image {
       width: 100%;
       
       img {
