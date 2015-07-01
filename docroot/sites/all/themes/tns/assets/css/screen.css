@@ -366,25 +366,27 @@ a {
     position: relative;
     z-index: 1; }
 
-.about-us #block-system-main {
+.basic-internal #block-system-main {
   max-width: 980px;
   margin-bottom: 30px; }
-.about-us .content {
+.basic-internal .content {
   width: 100%; }
-  .about-us .content .field-name-field-page-image {
+  .basic-internal .content .field-name-field-page-image,
+  .basic-internal .content .field-name-field-press-item-image {
     width: 100%;
     margin-bottom: 30px; }
-    .about-us .content .field-name-field-page-image img {
+    .basic-internal .content .field-name-field-page-image img,
+    .basic-internal .content .field-name-field-press-item-image img {
       display: block;
       width: 80%;
       margin: 0 auto; }
-  .about-us .content blockquote {
+  .basic-internal .content blockquote {
     font-weight: bold;
     font-size: 1.125rem;
     line-height: 1.4;
     width: 80%;
     margin: 2rem auto; }
-    .about-us .content blockquote:before {
+    .basic-internal .content blockquote:before {
       content: "";
       display: block;
       width: 50%;
@@ -392,7 +394,7 @@ a {
       height: 4px;
       background: #d9d9d9;
       margin: auto; }
-    .about-us .content blockquote:after {
+    .basic-internal .content blockquote:after {
       content: "";
       display: block;
       width: 50%;

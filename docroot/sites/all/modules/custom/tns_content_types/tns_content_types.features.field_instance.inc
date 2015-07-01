@@ -132,6 +132,10 @@ function tns_content_types_field_default_field_instances() {
     'label' => 'Featured Video',
     'required' => 0,
     'settings' => array(
+      'allowed_providers' => array(
+        0 => 'youtube',
+        1 => 'vimeo',
+      ),
       'description_field' => 0,
       'description_length' => 128,
       'user_register_form' => FALSE,
@@ -237,12 +241,114 @@ function tns_content_types_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-press_item-field_press_item_body'
+  $field_instances['node-press_item-field_press_item_body'] = array(
+    'bundle' => 'press_item',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_press_item_body',
+    'label' => 'Body',
+    'required' => 1,
+    'settings' => array(
+      'display_summary' => 0,
+      'text_processing' => 1,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 20,
+        'summary_rows' => 5,
+      ),
+      'type' => 'text_textarea_with_summary',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-press_item-field_press_item_image'
+  $field_instances['node-press_item-field_press_item_image'] = array(
+    'bundle' => 'press_item',
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'image',
+        'settings' => array(
+          'image_link' => '',
+          'image_style' => '',
+        ),
+        'type' => 'image',
+        'weight' => 0,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_press_item_image',
+    'label' => 'PR Image',
+    'required' => 1,
+    'settings' => array(
+      'alt_field' => 0,
+      'default_image' => 11,
+      'file_directory' => 'press',
+      'file_extensions' => 'png gif jpg jpeg',
+      'max_filesize' => '',
+      'max_resolution' => '',
+      'min_resolution' => '',
+      'title_field' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'oembed' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 0,
+          'default' => 0,
+          'image' => 'image',
+          'video' => 0,
+        ),
+        'progress_indicator' => 'throbber',
+      ),
+      'type' => 'media_generic',
+      'weight' => 1,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
   t('Featured Image');
   t('Featured Video');
   t('Image');
+  t('PR Image');
 
   return $field_instances;
 }
