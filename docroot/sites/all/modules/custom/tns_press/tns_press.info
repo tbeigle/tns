@@ -1,0 +1,14 @@
+name = TNS Press
+core = 7.x
+package = TNS
+dependencies[] = context
+dependencies[] = fe_block
+dependencies[] = views
+features[context][] = press
+features[ctools][] = context:context:3
+features[ctools][] = views:views_default:3.0
+features[fe_block_settings][] = views-press-recent_press
+features[features_api][] = api:2
+features[views_view][] = press
+features_exclude[dependencies][ctools] = ctools
+project path = sites/all/modules/custom
