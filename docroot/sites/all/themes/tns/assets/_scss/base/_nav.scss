@@ -149,28 +149,10 @@
     margin: auto;
     overflow: hidden;
     
-    @media screen and (max-width: 990px) {
-      padding: 20px 20px;
-    }
-    
-    @media screen and (max-width: 530px) {
-      float: left;
-      padding: 10px 10px;
-      width: 100%;
-      max-width: 100%;
-    }
-    
     .block-title {
       float: left;
       width: 20%;
       margin-right: 2%;
-      
-      @media screen and (max-width: 530px) {
-        float: none;
-        clear: both;
-        width: 100%;
-        margin: 0 0 12px;
-      }
       
       h2 {
         padding: 0;
@@ -193,10 +175,6 @@
       float: left;
       max-width: 78%;
       
-      @media screen and (max-width: 530px) {
-        width: 100%;
-      }
-      
       form > div > div {
         float: left;
         
@@ -218,41 +196,10 @@
         
         &.signup-box {
           width: 38%;
-          
-          @media screen and (max-width: 990px) {
-            clear: both;
-          }
         }
         
         &.form-actions {
           width: 12%;
-        }
-      }
-      
-      @media screen and (max-width: 530px) {
-        float: none;
-        clear: both;
-        width: 100%;
-        
-        form > div > div {
-          &.name,
-          &.zip {
-            &-box {
-              float: none;
-              clear: both;
-              width: 50%;
-              margin: 0 0 6px 0;
-            }
-          }
-          
-          &.signup-box {
-            width: 60%;
-            margin-left: 0;
-          }
-          
-          &.form-actions {
-            width: 20%;
-          }
         }
       }
     }
