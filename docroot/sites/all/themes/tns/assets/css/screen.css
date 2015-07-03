@@ -167,25 +167,10 @@ a {
     padding: 35px 20px;
     margin: auto;
     overflow: hidden; }
-    @media screen and (max-width: 990px) {
-      .region-footer .email-newsletter {
-        padding: 20px 20px; } }
-    @media screen and (max-width: 530px) {
-      .region-footer .email-newsletter {
-        float: left;
-        padding: 10px 10px;
-        width: 100%;
-        max-width: 100%; } }
     .region-footer .email-newsletter .block-title {
       float: left;
       width: 20%;
       margin-right: 2%; }
-      @media screen and (max-width: 530px) {
-        .region-footer .email-newsletter .block-title {
-          float: none;
-          clear: both;
-          width: 100%;
-          margin: 0 0 12px; } }
       .region-footer .email-newsletter .block-title h2 {
         padding: 0;
         margin: 0;
@@ -199,9 +184,6 @@ a {
     .region-footer .email-newsletter .block-content {
       float: left;
       max-width: 78%; }
-      @media screen and (max-width: 530px) {
-        .region-footer .email-newsletter .block-content {
-          width: 100%; } }
       .region-footer .email-newsletter .block-content form > div > div {
         float: left; }
         .region-footer .email-newsletter .block-content form > div > div.name-box, .region-footer .email-newsletter .block-content form > div > div.zip-box, .region-footer .email-newsletter .block-content form > div > div.signup-box {
@@ -212,26 +194,8 @@ a {
           width: 16%; }
         .region-footer .email-newsletter .block-content form > div > div.signup-box {
           width: 38%; }
-          @media screen and (max-width: 990px) {
-            .region-footer .email-newsletter .block-content form > div > div.signup-box {
-              clear: both; } }
         .region-footer .email-newsletter .block-content form > div > div.form-actions {
           width: 12%; }
-      @media screen and (max-width: 530px) {
-        .region-footer .email-newsletter .block-content {
-          float: none;
-          clear: both;
-          width: 100%; }
-          .region-footer .email-newsletter .block-content form > div > div.name-box, .region-footer .email-newsletter .block-content form > div > div.zip-box {
-            float: none;
-            clear: both;
-            width: 50%;
-            margin: 0 0 6px 0; }
-          .region-footer .email-newsletter .block-content form > div > div.signup-box {
-            width: 60%;
-            margin-left: 0; }
-          .region-footer .email-newsletter .block-content form > div > div.form-actions {
-            width: 20%; } }
     .region-footer .email-newsletter .element-invisible {
       display: none; }
     .region-footer .email-newsletter ::-webkit-input-placeholder {
@@ -359,9 +323,6 @@ a {
     width: 100%;
     padding: 0 10px;
     margin: 0 auto; }
-    @media screen and (max-width: 960px) {
-      .not-front #block-system-main {
-        width: 98%; } }
   .not-front .region-content {
     position: relative;
     z-index: 1; }
@@ -546,12 +507,6 @@ body.tour .tour-dates {
       float: left;
       width: 20%;
       margin-right: 2.0833%; }
-      @media screen and (max-width: 530px) {
-        .lp-001-bottom .email-newsletter .block-title {
-          float: none;
-          clear: both;
-          width: 100%;
-          margin: 0 0 12px; } }
       .lp-001-bottom .email-newsletter .block-title h2 {
         padding: 0;
         margin: 0;
@@ -564,9 +519,6 @@ body.tour .tour-dates {
     .lp-001-bottom .email-newsletter .block-content {
       float: left;
       width: 77.9167%; }
-      @media screen and (max-width: 530px) {
-        .lp-001-bottom .email-newsletter .block-content {
-          width: 100%; } }
       .lp-001-bottom .email-newsletter .block-content form > div > div {
         float: left; }
         .lp-001-bottom .email-newsletter .block-content form > div > div.name-box, .lp-001-bottom .email-newsletter .block-content form > div > div.zip-box {
@@ -578,21 +530,6 @@ body.tour .tour-dates {
           margin: 0 1.0989%; }
         .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
           width: 12.4067%; }
-      @media screen and (max-width: 530px) {
-        .lp-001-bottom .email-newsletter .block-content {
-          float: none;
-          clear: both;
-          width: 100%; }
-          .lp-001-bottom .email-newsletter .block-content form > div > div.name-box, .lp-001-bottom .email-newsletter .block-content form > div > div.zip-box {
-            float: none;
-            clear: both;
-            width: 50%;
-            margin: 0 0 6px; }
-          .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
-            width: 60%;
-            margin-left: 0; }
-          .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
-            width: 20%; } }
     .lp-001-bottom .email-newsletter .element-invisible {
       display: none; }
     .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
@@ -652,5 +589,56 @@ body.tour .tour-dates {
           background: #fff; }
         .lp-001-bottom .email-newsletter input[type="submit"]:hover, .lp-001-bottom .email-newsletter input[type="submit"]:active, .lp-001-bottom .email-newsletter input[type="submit"]:focus {
           color: #134ecf; }
+
+/* Misc
+ * -----------------------------------------------------------------------------*/
+@media screen and (max-width: 990px) {
+  .region-footer .email-newsletter {
+    padding: 20px; }
+    .region-footer .email-newsletter .block-content form > div > div.signup-box {
+      clear: both; } }
+@media screen and (max-width: 960px) {
+  .not-front #block-system-main {
+    width: 98%; } }
+@media screen and (max-width: 530px) {
+  .region-footer .email-newsletter {
+    float: left;
+    padding: 10px 10px;
+    width: 100%;
+    max-width: 100%; }
+    .region-footer .email-newsletter .block-title {
+      float: none;
+      clear: both;
+      width: 100%;
+      margin: 0 0 12px; }
+    .region-footer .email-newsletter .block-content {
+      width: 100%; }
+      .region-footer .email-newsletter .block-content form > div > div.name-box, .region-footer .email-newsletter .block-content form > div > div.zip-box {
+        float: none;
+        clear: both;
+        width: 50%;
+        margin: 0 0 6px 0; }
+      .region-footer .email-newsletter .block-content form > div > div.signup-box {
+        width: 60%;
+        margin-left: 0; }
+      .region-footer .email-newsletter .block-content form > div > div.form-actions {
+        width: 20%; }
+
+  .lp-001-bottom .email-newsletter .block-title, .lp-001-bottom .email-newsletter .block-content {
+    float: none;
+    clear: both;
+    width: 100%; }
+  .lp-001-bottom .email-newsletter .block-title {
+    margin: 0 0 12px; }
+  .lp-001-bottom .email-newsletter .block-content form > div > div.name-box, .lp-001-bottom .email-newsletter .block-content form > div > div.zip-box {
+    float: none;
+    clear: both;
+    width: 50%;
+    margin: 0 0 6px; }
+  .lp-001-bottom .email-newsletter .block-content form > div > div.signup-box {
+    width: 60%;
+    margin-left: 0; }
+  .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
+    width: 20%; } }
 
 /*# sourceMappingURL=screen.css.map */
