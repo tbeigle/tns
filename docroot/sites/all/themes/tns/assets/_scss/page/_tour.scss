@@ -1,15 +1,13 @@
-body.tour {
+.tour {
   #headerwrap {
     margin-bottom: 0;
   }
   
   #page-title {
-    display: inline-block;
+    color: #fff;
   }
   
   #contentwrap {
-    text-align: center;
-    padding: 30px 10px 160px;
     background: {
       image: url(../images/bg-tour.jpg);
       position: center top;

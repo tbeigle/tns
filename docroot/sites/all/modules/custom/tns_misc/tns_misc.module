@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TNS Miscellaneous feature.
+ */
+
+include_once 'tns_misc.features.inc';

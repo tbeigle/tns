@@ -3,6 +3,17 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.no-style {
+  padding: 0;
+  margin: 0;
+  
+  li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
 body {
   margin: 0;
 }
@@ -51,7 +62,7 @@ img {
     transform: uppercase;
   }
   
-  color: #fff;
+  color: $colLpCpyRt;
   
   &:before,
   &:after {
@@ -69,8 +80,32 @@ img {
   }
 }
 
+.show-title {
+  #page-title {
+    display: inline-block;
+  }
+  
+  #contentwrap {
+    text-align: center;
+    padding: 30px 10px 160px;
+  }
+  
+  #main-content {
+    text-align: left;
+  }
+}
+
 a {
   transition: all 0.5s;
+  @include linkAllStates(text-decoration, none);
+  @include linkAllStates(color, $colLpSnUpBxBg);
+}
+
+.views-more-link {
+  font: {
+    weight: 600;
+    size: 18px;
+  }
 }
 
 .rsvp-button {

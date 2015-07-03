@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the TNS Press feature.
+ */
+
+include_once 'tns_press.features.inc';
