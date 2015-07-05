@@ -48,7 +48,7 @@ function tns_bit_block_view($delta = '') {
           $event['time'],
           $event['location'],
           $event['venue'],
-          l('RSVP', $event['url'], array('target' => '_blank', 'attributes' => array('class' => array('rsvp-button')))),
+          l('RSVP', $event['url'], array('attributes' => array('target' => '_blank', 'class' => array('rsvp-button')))),
         );
       }
       
