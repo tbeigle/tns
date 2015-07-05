@@ -44,7 +44,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'access all webform results',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'webform',
   );
@@ -76,7 +75,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'access content overview',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'node',
   );
@@ -96,7 +94,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'access dashboard',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'dashboard',
   );
@@ -151,7 +148,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'access user profiles',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'user',
   );
@@ -219,6 +215,7 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer content types',
     'roles' => array(
       'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'node',
   );
@@ -246,6 +243,7 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer filters',
     'roles' => array(
       'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'filter',
   );
@@ -282,7 +280,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer media',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'media',
   );
@@ -292,7 +289,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer media oembed',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'media_oembed',
   );
@@ -322,6 +318,7 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer meta tags',
     'roles' => array(
       'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'metatag',
   );
@@ -359,7 +356,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer pathauto',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'pathauto',
   );
@@ -378,7 +374,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer redirects',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'redirect',
   );
@@ -433,7 +428,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer taxonomy',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'taxonomy',
   );
@@ -470,7 +464,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer video styles',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'video_embed_field',
   );
@@ -480,7 +473,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'administer views',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'views',
   );
@@ -508,6 +500,7 @@ function tns_misc_user_default_permissions() {
     'name' => 'bypass node access',
     'roles' => array(
       'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'node',
   );
@@ -526,7 +519,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'change own username',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'user',
   );
@@ -538,13 +530,6 @@ function tns_misc_user_default_permissions() {
       'administrator' => 'administrator',
     ),
     'module' => 'context_ui',
-  );
-
-  // Exported permission: 'create about_page content'.
-  $permissions['create about_page content'] = array(
-    'name' => 'create about_page content',
-    'roles' => array(),
-    'module' => 'node',
   );
 
   // Exported permission: 'create article content'.
@@ -586,7 +571,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'create url aliases',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'path',
   );
@@ -623,16 +607,8 @@ function tns_misc_user_default_permissions() {
     'name' => 'delete all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'webform',
-  );
-
-  // Exported permission: 'delete any about_page content'.
-  $permissions['delete any about_page content'] = array(
-    'name' => 'delete any about_page content',
-    'roles' => array(),
-    'module' => 'node',
   );
 
   // Exported permission: 'delete any article content'.
@@ -675,13 +651,6 @@ function tns_misc_user_default_permissions() {
     'roles' => array(
       'administrator' => 'administrator',
     ),
-    'module' => 'node',
-  );
-
-  // Exported permission: 'delete own about_page content'.
-  $permissions['delete own about_page content'] = array(
-    'name' => 'delete own about_page content',
-    'roles' => array(),
     'module' => 'node',
   );
 
@@ -742,7 +711,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'node',
   );
@@ -771,16 +739,8 @@ function tns_misc_user_default_permissions() {
     'name' => 'edit all webform submissions',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'webform',
-  );
-
-  // Exported permission: 'edit any about_page content'.
-  $permissions['edit any about_page content'] = array(
-    'name' => 'edit any about_page content',
-    'roles' => array(),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit any article content'.
@@ -844,13 +804,6 @@ function tns_misc_user_default_permissions() {
       'band member' => 'band member',
     ),
     'module' => 'metatag',
-  );
-
-  // Exported permission: 'edit own about_page content'.
-  $permissions['edit own about_page content'] = array(
-    'name' => 'edit own about_page content',
-    'roles' => array(),
-    'module' => 'node',
   );
 
   // Exported permission: 'edit own article content'.
@@ -929,7 +882,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'edit webform components',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'webform',
   );
@@ -1014,7 +966,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'node',
   );
@@ -1087,7 +1038,8 @@ function tns_misc_user_default_permissions() {
   $permissions['use text format admin_filtered_html'] = array(
     'name' => 'use text format admin_filtered_html',
     'roles' => array(
-      'authenticated user' => 'authenticated user',
+      'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'filter',
   );
@@ -1097,8 +1049,8 @@ function tns_misc_user_default_permissions() {
     'name' => 'use text format filtered_html',
     'roles' => array(
       'administrator' => 'administrator',
-      'anonymous user' => 'anonymous user',
       'authenticated user' => 'authenticated user',
+      'band member' => 'band member',
     ),
     'module' => 'filter',
   );
@@ -1138,7 +1090,6 @@ function tns_misc_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'administrator' => 'administrator',
-      'band member' => 'band member',
     ),
     'module' => 'node',
   );

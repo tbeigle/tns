@@ -17,7 +17,23 @@ function tns_misc_filter_default_formats() {
     'cache' => 1,
     'status' => 1,
     'weight' => 0,
-    'filters' => array(),
+    'filters' => array(
+      'filter_autop' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'video_embed_field' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'media_filter' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
+    ),
   );
 
   // Exported format: Filtered HTML.
@@ -35,16 +51,26 @@ function tns_misc_filter_default_formats() {
           'filter_url_length' => 72,
         ),
       ),
+      'video_embed_field' => array(
+        'weight' => 0,
+        'status' => 1,
+        'settings' => array(),
+      ),
       'filter_html' => array(
         'weight' => 1,
         'status' => 1,
         'settings' => array(
-          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd>',
+          'allowed_html' => '<a> <em> <strong> <cite> <blockquote> <code> <ul> <ol> <li> <dl> <dt> <dd> <p> <img> <table> <tr> <td> <thead> <th> <tbody> ',
           'filter_html_help' => 1,
           'filter_html_nofollow' => 0,
         ),
       ),
       'filter_autop' => array(
+        'weight' => 2,
+        'status' => 1,
+        'settings' => array(),
+      ),
+      'media_filter' => array(
         'weight' => 2,
         'status' => 1,
         'settings' => array(),
