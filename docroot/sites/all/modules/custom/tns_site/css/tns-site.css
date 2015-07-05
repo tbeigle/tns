@@ -1,0 +1,42 @@
+.item-list .social-media li a:hover,
+.item-list .social-media li a:active,
+.item-list .social-media li a:focus {
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+
+.item-list .social-media li.facebook a:hover,
+.item-list .social-media li.facebook a:active,
+.item-list .social-media li.facebook a:focus {
+  background-image: url('../images/bg-icon-facebook.png');
+}
+
+.item-list .social-media li.instagram a:hover,
+.item-list .social-media li.instagram a:active,
+.item-list .social-media li.instagram a:focus {
+  background-image: url('../images/bg-icon-instagram.png');
+}
+
+.item-list .social-media li.spotify a:hover,
+.item-list .social-media li.spotify a:active,
+.item-list .social-media li.spotify a:focus {
+  background-image: url('../images/bg-icon-spotify.png');
+}
+
+.item-list .social-media li.itunes a:hover,
+.item-list .social-media li.itunes a:active,
+.item-list .social-media li.itunes a:focus {
+  background-image: url('../images/bg-icon-itunes.png');
+}
+
+.item-list .social-media li.twitter a:hover,
+.item-list .social-media li.twitter a:active,
+.item-list .social-media li.twitter a:focus {
+  background-image: url('../images/bg-icon-twitter.png');
+}
+
+.item-list .social-media li.youtube a:hover,
+.item-list .social-media li.youtube a:active,
+.item-list .social-media li.youtube a:focus {
+  background-image: url('../images/bg-icon-youtube.png');
+}

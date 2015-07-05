@@ -45,8 +45,8 @@
     }
   }
 }
-      
-.social-media {
+
+.item-list .social-media {
   width: 100%;
   background: #000;
   padding: 10px;
@@ -63,47 +63,15 @@
     
     &.facebook {
       margin-right: 20px;
-      
-      a {
-        @include hoverActiveFocus(background, url('../images/bg-icon-facebook.png') 0 0 no-repeat);
-      }
     }
     
     &.instagram {
       margin-right: 12px;
-      
-      a {
-        @include hoverActiveFocus(background, url('../images/bg-icon-instagram.png') 0 0 no-repeat);
-      }
-    }
-    
-    &.spotify {
-      a {
-        @include hoverActiveFocus(background, url('../images/bg-icon-spotify.png') 0 0 no-repeat);
-      }
     }
     
     &.itunes,
     &:last-child {
       margin-right: 0;
-    }
-    
-    &.itunes {
-      a {
-        @include hoverActiveFocus(background, url('../images/bg-icon-itunes.png') 0 0 no-repeat);
-      }
-    }
-    
-    &.twitter {
-      a {
-        @include hoverActiveFocus(background, url('../images/bg-icon-twitter.png') 0 0 no-repeat);
-      }
-    }
-    
-    &.youtube {
-      a {
-        @include hoverActiveFocus(background, url('../images/bg-icon-youtube.png') 0 0 no-repeat);
-      }
     }
     
     a {
