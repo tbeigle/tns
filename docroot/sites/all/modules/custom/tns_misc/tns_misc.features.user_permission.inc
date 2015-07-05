@@ -742,6 +742,7 @@ function tns_misc_user_default_permissions() {
     'name' => 'delete revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'node',
   );
@@ -1013,6 +1014,7 @@ function tns_misc_user_default_permissions() {
     'name' => 'revert revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'node',
   );
@@ -1136,6 +1138,7 @@ function tns_misc_user_default_permissions() {
     'name' => 'view revisions',
     'roles' => array(
       'administrator' => 'administrator',
+      'band member' => 'band member',
     ),
     'module' => 'node',
   );

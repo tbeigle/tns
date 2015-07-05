@@ -11,12 +11,13 @@ features[] = social_media_links
 features[] = site_name
 
 ; REGIONS
-regions[nav] = Flyout Navigation
+regions[nav] = Navigation
 regions[header] = Header
 regions[highlighted] = Highlighted
 regions[content] = Main Content
 regions[secondary_content] = Secondary Content
 regions[sidebar] = Sidebar
+regions[footer_super] = Super Footer
 regions[footer] = Footer
 
 ; SCRIPTS
