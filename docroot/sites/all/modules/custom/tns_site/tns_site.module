@@ -6,6 +6,64 @@
  */
 
 /**
+ * Implements hook_menu().
+ */
+function tns_site_menu() {
+  $items = array();
+
+  $items['admin/tns'] = array(
+    'title' => 'TNS',
+    'description' => 'TNS Administration',
+    'page callback' => 'tns_site_admin',
+    'access arguments' => array('access administration menu'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => -100,
+  );
+
+  $items['admin/tns/settings'] = array(
+    'title' => 'Settings',
+    'description' => 'TNS site settings',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('tns_site_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'type' => MENU_NORMAL_ITEM,
+    'weight' => 100,
+  );
+
+  $items['admin/tns/settings/core'] = array(
+    'title' => 'Core',
+    'type' => MENU_DEFAULT_LOCAL_TASK,
+    'weight' => -100,
+  );
+
+  return $items;
+}
+
+/**
+ * Page callback for admin/tns
+ */
+function tns_site_admin() {
+  $output = array();
+  
+  $output[] = array(
+    '#markup' => '<p>TBD</p>',
+  );
+  
+  return $output;
+}
+
+/**
+ * Form for the core settings page
+ */
+function tns_site_admin_settings($form, &$form_state) {
+  $form[] = array(
+    '#markup' => '<p>TBD</p>',
+  );
+  
+  return $form;
+}
+
+/**
  * Implements hook_form_alter().
  */
 function tns_site_form_alter(&$form, &$form_state, $form_id) {

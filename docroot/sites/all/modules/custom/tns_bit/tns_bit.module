@@ -6,6 +6,61 @@
 define('BIT_APPID', 'thenewschematics_com');
 
 /**
+ * Implements hook_menu().
+ */
+function tns_bit_menu() {
+  $items = array();
+
+  $items['admin/tns/settings/bit'] = array(
+    'title' => 'BiT Events Admin',
+    'type' => MENU_LOCAL_TASK,
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('tns_bit_settings'),
+    'access arguments' => array('administer site configuration'),
+  );
+  
+  return $items;
+}
+
+/**
+ * Form for administering Bandsintown events overrides
+ */
+function tns_bit_settings($form, &$form_state) {
+  $events = tns_bit_tour_dates(TRUE);
+  $event_overrides = variable_get('tns_bit_event_overrides', array());
+  $form['tns_bit_event_overrides'] = array(
+    '#tree' => TRUE,
+  );
+  
+  foreach ($events as $event) {
+    $eo = isset($event_overrides[$event->id]) ? $event_overrides[$event->id] : array();
+    
+    $form['tns_bit_event_overrides'][$event->id] = array(
+      '#type' => 'fieldset',
+      '#collapsible' => TRUE,
+      '#collapsed' => FALSE,
+      '#title' => date('n.j.y, g:i a', strtotime($event->datetime)) . ', ' . $event->venue->name,
+      '#tree' => TRUE,
+    );
+    
+    $form['tns_bit_event_overrides'][$event->id]['disabled'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Hide Event'),
+      '#default_value' => !empty($eo['disabled']) ? 1 : 0,
+    );
+    
+    $form['tns_bit_event_overrides'][$event->id]['url'] = array(
+      '#type' => 'textfield',
+      '#title' => t('RSVP URL Override'),
+      '#default_value' => !empty($eo['url']) ? $eo['url'] : '',
+      '#description' => t('If left blank, the RSVP URL will be @url.', array('@url' => $event->url)),
+    );
+  }
+  
+  return system_settings_form($form);
+}
+
+/**
  * Implements hook_block_info()
  */
 function tns_bit_block_info() {
@@ -39,6 +94,7 @@ function tns_bit_block_view($delta = '') {
           t('Info'),
         ),
         '#rows' => array(),
+        '#sticky' => FALSE,
       );
       
       $events = tns_bit_tour_dates();
@@ -62,23 +118,29 @@ function tns_bit_block_view($delta = '') {
 /**
  * Gets upcoming tour dates
  */
-function tns_bit_tour_dates() {
+function tns_bit_tour_dates($editing = FALSE) {
   $output = array();
   $bit = tns_bit_obj();
   $bit->setAPI(BIT_APPID);
+  $event_overrides = variable_get('tns_bit_event_overrides', array());
   
   try {
     $results = $bit->getEventsForSingleArtist('The New Schematics');
+    if ($editing) return $results;
     
     // loop through the response
     foreach($results as $event) {
+      $eo = isset($event_overrides[$event->id]) ? $event_overrides[$event->id] : array();
+      if (!empty($eo['disabled'])) continue;
+      
       list($date, $time) = explode('|', date('n.j.y|g:i a', strtotime($event->datetime)));
+      
       $output[] = array(
         'date' => $date,
         'time' => $time,
         'location' => $event->venue->city . ', ' . $event->venue->region,
         'venue' => $event->venue->name,
-        'url' => $event->url,
+        'url' => !empty($eo['url']) ? $eo['url'] : $event->url,
       );
     }
   }
