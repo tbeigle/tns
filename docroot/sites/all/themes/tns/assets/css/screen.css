@@ -271,6 +271,130 @@ a {
 .placeholder-label label {
   display: none; }
 
+::-webkit-input-placeholder {
+  font-family: "Source Sans Pro"; }
+
+:-moz-placeholder {
+  font-family: "Source Sans Pro"; }
+
+::-moz-placeholder {
+  font-family: "Source Sans Pro"; }
+
+:-ms-input-placeholder {
+  font-family: "Source Sans Pro"; }
+
+::-webkit-input-placeholder {
+  font-size: 11px; }
+
+:-moz-placeholder {
+  font-size: 11px; }
+
+::-moz-placeholder {
+  font-size: 11px; }
+
+:-ms-input-placeholder {
+  font-size: 11px; }
+
+::-webkit-input-placeholder {
+  font-style: italic; }
+
+:-moz-placeholder {
+  font-style: italic; }
+
+::-moz-placeholder {
+  font-style: italic; }
+
+:-ms-input-placeholder {
+  font-style: italic; }
+
+::-webkit-input-placeholder {
+  color: #999; }
+
+:-moz-placeholder {
+  color: #999; }
+
+::-moz-placeholder {
+  color: #999; }
+
+:-ms-input-placeholder {
+  color: #999; }
+
+input,
+textarea,
+select {
+  color: #fff; }
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  display: block;
+  margin: 0;
+  padding: 0 8px 3px;
+  border: 1px solid #494949;
+  background: #151515; }
+  input[type="text"]:link, input[type="text"]:visited, input[type="text"]:hover, input[type="text"]:active, input[type="text"]:focus,
+  input[type="email"]:link,
+  input[type="email"]:visited,
+  input[type="email"]:hover,
+  input[type="email"]:active,
+  input[type="email"]:focus,
+  textarea:link,
+  textarea:visited,
+  textarea:hover,
+  textarea:active,
+  textarea:focus,
+  select:link,
+  select:visited,
+  select:hover,
+  select:active,
+  select:focus {
+    outline: none; }
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  height: 29px; }
+input[type="submit"] {
+  display: block;
+  height: 29px;
+  width: 100%;
+  background: #134ecf;
+  border: none;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.5s; }
+  input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+    background: #fff; }
+  input[type="submit"]:hover, input[type="submit"]:active, input[type="submit"]:focus {
+    color: #134ecf; }
+
+body.node-type-webform #block-system-main {
+  text-align: center; }
+  body.node-type-webform #block-system-main .node.node-webform dt {
+    font-weight: bold; }
+  body.node-type-webform #block-system-main .node.node-webform dd {
+    margin: 0 0 1rem; }
+  body.node-type-webform #block-system-main .node.node-webform .webform-client-form {
+    display: block;
+    width: 50%;
+    margin: auto; }
+    body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="text"],
+    body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="email"],
+    body.node-type-webform #block-system-main .node.node-webform .webform-client-form textarea,
+    body.node-type-webform #block-system-main .node.node-webform .webform-client-form select {
+      background: #fff;
+      border-color: #999;
+      color: #000; }
+    body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"] {
+      display: block;
+      width: 100%;
+      max-width: 80px;
+      margin: auto; }
+      body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:link, body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:visited, body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:hover, body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:active, body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:focus {
+        color: #fff; }
+      body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:hover, body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:active, body.node-type-webform #block-system-main .node.node-webform .webform-client-form input[type="submit"]:focus {
+        background: #151515; }
+
 /* Pages
  * -----------------------------------------------------------------------------*/
 .front #logo {
@@ -565,7 +689,47 @@ a {
     max-width: 700px;
     padding: 0 20px;
     margin: auto;
-    overflow: hidden; }
+    overflow: hidden;
+    /*
+    @include vendorizePlaceholder(font-family, 'Source Sans Pro');
+    @include vendorizePlaceholder(font-size, 11px);
+    @include vendorizePlaceholder(font-style, italic);
+    @include vendorizePlaceholder(color, $colLpPlHldr);
+    
+    input {
+      @include linkAllStates(outline, none);
+      color: #fff;
+      
+      &[type="text"],
+      &[type="email"],
+      &[type="textarea"],
+      &[type="select"] {
+        display: block;
+        margin: 0;
+        padding: 0 8px 3px;
+        border: 1px solid $colLpSnUpBx;
+        background: #151515;
+      }
+      
+      &[type="text"],
+      &[type="email"] {
+        width: 100%;
+        height: 29px;
+      }
+      
+      &[type="submit"] {
+        display: block;
+        height: 29px;
+        width: 100%;
+        background: $colLpSnUpBxBg;
+        border: none;
+        font-size: 13px;
+        cursor: pointer;
+        
+        @include hoverActiveFocus(background, #fff);
+        @include hoverActiveFocus(color, $colLpSnUpBxBg);
+      }
+    }*/ }
     .lp-001-bottom .email-newsletter .block-title {
       float: left;
       width: 20%;
@@ -595,63 +759,6 @@ a {
           width: 12.4067%; }
     .lp-001-bottom .email-newsletter .element-invisible {
       display: none; }
-    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
-      font-family: "Source Sans Pro"; }
-    .lp-001-bottom .email-newsletter :-moz-placeholder {
-      font-family: "Source Sans Pro"; }
-    .lp-001-bottom .email-newsletter ::-moz-placeholder {
-      font-family: "Source Sans Pro"; }
-    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
-      font-family: "Source Sans Pro"; }
-    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
-      font-size: 11px; }
-    .lp-001-bottom .email-newsletter :-moz-placeholder {
-      font-size: 11px; }
-    .lp-001-bottom .email-newsletter ::-moz-placeholder {
-      font-size: 11px; }
-    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
-      font-size: 11px; }
-    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
-      font-style: italic; }
-    .lp-001-bottom .email-newsletter :-moz-placeholder {
-      font-style: italic; }
-    .lp-001-bottom .email-newsletter ::-moz-placeholder {
-      font-style: italic; }
-    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
-      font-style: italic; }
-    .lp-001-bottom .email-newsletter ::-webkit-input-placeholder {
-      color: #999; }
-    .lp-001-bottom .email-newsletter :-moz-placeholder {
-      color: #999; }
-    .lp-001-bottom .email-newsletter ::-moz-placeholder {
-      color: #999; }
-    .lp-001-bottom .email-newsletter :-ms-input-placeholder {
-      color: #999; }
-    .lp-001-bottom .email-newsletter input {
-      color: #fff; }
-      .lp-001-bottom .email-newsletter input:link, .lp-001-bottom .email-newsletter input:visited, .lp-001-bottom .email-newsletter input:hover, .lp-001-bottom .email-newsletter input:active, .lp-001-bottom .email-newsletter input:focus {
-        outline: none; }
-      .lp-001-bottom .email-newsletter input[type="text"], .lp-001-bottom .email-newsletter input[type="email"], .lp-001-bottom .email-newsletter input[type="textarea"], .lp-001-bottom .email-newsletter input[type="select"] {
-        display: block;
-        margin: 0;
-        padding: 0 8px 3px;
-        border: 1px solid #494949;
-        background: #151515; }
-      .lp-001-bottom .email-newsletter input[type="text"], .lp-001-bottom .email-newsletter input[type="email"] {
-        width: 100%;
-        height: 29px; }
-      .lp-001-bottom .email-newsletter input[type="submit"] {
-        display: block;
-        height: 29px;
-        width: 100%;
-        background: #134ecf;
-        border: none;
-        font-size: 13px;
-        cursor: pointer; }
-        .lp-001-bottom .email-newsletter input[type="submit"]:hover, .lp-001-bottom .email-newsletter input[type="submit"]:active, .lp-001-bottom .email-newsletter input[type="submit"]:focus {
-          background: #fff; }
-        .lp-001-bottom .email-newsletter input[type="submit"]:hover, .lp-001-bottom .email-newsletter input[type="submit"]:active, .lp-001-bottom .email-newsletter input[type="submit"]:focus {
-          color: #134ecf; }
 
 /* Misc
  * -----------------------------------------------------------------------------*/

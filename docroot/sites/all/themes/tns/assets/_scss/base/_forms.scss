@@ -3,3 +3,90 @@
     display: none;
   }
 }
+
+@include vendorizePlaceholder(font-family, 'Source Sans Pro');
+@include vendorizePlaceholder(font-size, 11px);
+@include vendorizePlaceholder(font-style, italic);
+@include vendorizePlaceholder(color, $colLpPlHldr);
+
+input,
+textarea,
+select {
+  color: #fff;
+}
+
+input[type="text"],
+input[type="email"],
+textarea,
+select {
+  display: block;
+  margin: 0;
+  padding: 0 8px 3px;
+  border: 1px solid $colLpSnUpBx;
+  background: $gray1;
+  @include linkAllStates(outline, none);
+}
+
+input {
+  &[type="text"],
+  &[type="email"] {
+    width: 100%;
+    height: 29px;
+  }
+  
+  &[type="submit"] {
+    display: block;
+    height: 29px;
+    width: 100%;
+    background: $colLpSnUpBxBg;
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    
+    transition: all $defTransitionSpeed;
+    
+    @include hoverActiveFocus(background, #fff);
+    @include hoverActiveFocus(color, $colLpSnUpBxBg);
+  }
+}
+
+body.node-type-webform {
+  #block-system-main {
+    text-align: center;
+    
+    .node.node-webform {
+      dt {
+        font-weight: bold;
+      }
+      
+      dd {
+        margin: 0 0 1rem;
+      }
+      
+      .webform-client-form {
+        display: block;
+        width: 50%;
+        margin: auto;
+        
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+          background: #fff;
+          border-color: $colLpPlHldr;
+          color: #000;
+        }
+        
+        input[type="submit"] {
+          display: block;
+          width: 100%;
+          max-width: 80px;
+          margin: auto;
+          
+          @include linkAllStates(color, #fff);
+          @include hoverActiveFocus(background, $gray1);
+        }
+      }
+    }
+  }
+}
