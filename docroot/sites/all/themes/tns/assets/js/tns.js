@@ -12,16 +12,16 @@
       var $headerMenu = $("#block-system-main-menu");
       var menuMargin;
       var $headerLogo = $("#logo");
+      var mobileWidth = 910;
 
       function positionFooter() {
         footerPosition = $socialMedia.offset().top + $socialMedia.outerHeight() - $(window).scrollTop();
-        
-        if ((footerPosition + footerHeight > windowHeight) && (footerFixed == false)) {
+        if ($(window).width() > mobileWidth && (footerPosition + footerHeight > windowHeight) && (footerFixed == false)) {
           $footer.css({position: "fixed", bottom: "0"});
           footerFixed = true;
           $socialMedia.css({marginBottom: footerHeight});
         }
-        else if ((footerPosition + footerHeight < windowHeight) && (footerFixed == true)) {
+        else if ($(window).width() <= mobileWidth || ((footerPosition + footerHeight < windowHeight) && (footerFixed == true))) {
           $footer.css({position: "static", bottom: ""});
           footerFixed = false;
           $socialMedia.css({marginBottom: 0});

@@ -185,7 +185,7 @@ a {
       margin: 10px 0; }
   .region-footer .email-newsletter {
     float: right;
-    max-width: 50%;
+    max-width: 60%;
     padding: 35px 20px;
     margin: auto;
     overflow: hidden; }
@@ -773,11 +773,6 @@ body.node-type-webform #block-system-main {
 
 /* Misc
  * -----------------------------------------------------------------------------*/
-@media screen and (max-width: 990px) {
-  .region-footer .email-newsletter {
-    padding: 20px; }
-    .region-footer .email-newsletter .block-content form > div > div.signup-box {
-      clear: both; } }
 @media screen and (max-width: 960px) {
   .not-front #block-system-main {
     width: 98%; } }
@@ -819,7 +814,34 @@ body.node-type-webform #block-system-main {
       .js .region-nav #block-system-main-menu .menu li a {
         display: inline-block;
         width: auto; } }
-@media screen and (max-width: 530px) {
+@media screen and (max-width: 883px) {
+  .region-footer .email-newsletter {
+    padding: 20px; }
+    .region-footer .email-newsletter .block-title h2 {
+      line-height: normal; }
+    .region-footer .email-newsletter .block-content form > div > div.signup-box {
+      clear: both; }
+    .region-footer .email-newsletter .block-content form > div > div.name-box {
+      width: 70%; }
+    .region-footer .email-newsletter .block-content form > div > div.zip-box {
+      width: 28%; }
+    .region-footer .email-newsletter .block-content form > div > div.form-actions, .region-footer .email-newsletter .block-content form > div > div.signup-box {
+      margin-top: 2px; }
+    .region-footer .email-newsletter .block-content form > div > div.signup-box {
+      width: 70%; }
+    .region-footer .email-newsletter .block-content form > div > div.form-actions {
+      width: 28%; } }
+/*@media screen and (max-width: 760px) {
+  // Footer
+  .region-footer {
+    .email-newsletter {
+      clear: both;
+      float: none;
+      margin: 0;
+    }
+  }
+}*/
+@media screen and (max-width: 760px) {
   .region-footer .email-newsletter {
     float: left;
     padding: 10px 10px;
