@@ -123,7 +123,7 @@ a {
       #block-system-main-menu .menu .leaf a.active {
         border-color: #fff; }
 
-.social-media {
+.item-list .social-media {
   width: 100%;
   background: #000;
   padding: 10px;
@@ -131,30 +131,18 @@ a {
   text-align: center;
   font-size: 0;
   line-height: 0; }
-  .social-media li {
+  .item-list .social-media li {
     list-style: none;
     display: inline-block;
     padding: 0;
     margin: 0 16px 0 0; }
-    .social-media li.facebook {
+    .item-list .social-media li.facebook {
       margin-right: 20px; }
-      .social-media li.facebook a:hover, .social-media li.facebook a:active, .social-media li.facebook a:focus {
-        background: url("../images/bg-icon-facebook.png") 0 0 no-repeat; }
-    .social-media li.instagram {
+    .item-list .social-media li.instagram {
       margin-right: 12px; }
-      .social-media li.instagram a:hover, .social-media li.instagram a:active, .social-media li.instagram a:focus {
-        background: url("../images/bg-icon-instagram.png") 0 0 no-repeat; }
-    .social-media li.spotify a:hover, .social-media li.spotify a:active, .social-media li.spotify a:focus {
-      background: url("../images/bg-icon-spotify.png") 0 0 no-repeat; }
-    .social-media li.itunes, .social-media li:last-child {
+    .item-list .social-media li.itunes, .item-list .social-media li:last-child {
       margin-right: 0; }
-    .social-media li.itunes a:hover, .social-media li.itunes a:active, .social-media li.itunes a:focus {
-      background: url("../images/bg-icon-itunes.png") 0 0 no-repeat; }
-    .social-media li.twitter a:hover, .social-media li.twitter a:active, .social-media li.twitter a:focus {
-      background: url("../images/bg-icon-twitter.png") 0 0 no-repeat; }
-    .social-media li.youtube a:hover, .social-media li.youtube a:active, .social-media li.youtube a:focus {
-      background: url("../images/bg-icon-youtube.png") 0 0 no-repeat; }
-    .social-media li a {
+    .item-list .social-media li a {
       position: relative;
       display: block;
       text-indent: -9999px;
@@ -163,10 +151,10 @@ a {
       display: block;
       font-size: 0;
       text-align: start; }
-      .social-media li a img {
+      .item-list .social-media li a img {
         display: block;
         opacity: 1; }
-      .social-media li a:hover img, .social-media li a:active img, .social-media li a:focus img {
+      .item-list .social-media li a:hover img, .item-list .social-media li a:active img, .item-list .social-media li a:focus img {
         opacity: 0; }
 
 .region-footer {

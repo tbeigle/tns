@@ -16,5 +16,11 @@ function tns_misc_user_default_roles() {
     'weight' => 2,
   );
 
+  // Exported role: band member.
+  $roles['band member'] = array(
+    'name' => 'band member',
+    'weight' => 3,
+  );
+
   return $roles;
 }
