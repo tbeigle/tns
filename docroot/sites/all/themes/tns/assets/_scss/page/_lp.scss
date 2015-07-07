@@ -203,7 +203,7 @@
         .element-invisible {
           display: none;
         }
-        
+        /*
         @include vendorizePlaceholder(font-family, 'Source Sans Pro');
         @include vendorizePlaceholder(font-size, 11px);
         @include vendorizePlaceholder(font-style, italic);
@@ -242,7 +242,7 @@
             @include hoverActiveFocus(background, #fff);
             @include hoverActiveFocus(color, $colLpSnUpBxBg);
           }
-        }
+        }*/
       }
     }
   }

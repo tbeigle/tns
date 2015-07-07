@@ -96,7 +96,7 @@ img {
 }
 
 a {
-  transition: all 0.5s;
+  transition: all $defTransitionSpeed;
   @include linkAllStates(text-decoration, none);
   @include linkAllStates(color, $colLpSnUpBxBg);
 }
