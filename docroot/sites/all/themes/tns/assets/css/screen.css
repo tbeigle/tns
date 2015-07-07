@@ -1,6 +1,13 @@
 /* Base
  * -----------------------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
+@font-face {
+  font-family: 'entypo';
+  src: url("../fonts/Entypo-webfont.eot");
+  src: url("../fonts/Entypo-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Entypo-webfont.woff") format("woff"), url("../fonts/Entypo-webfont.ttf") format("truetype"), url("../fonts/Entypo-webfont.svg#entyporegular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
 * {
   box-sizing: border-box;
   font-family: 'Source Sans Pro', sans-serif; }
@@ -91,6 +98,9 @@ a {
     background: #fff; }
   .rsvp-button:hover, .rsvp-button:active, .rsvp-button:focus {
     color: #d6aa39; }
+
+.mobile-menu-icon {
+  display: none; }
 
 #block-system-main-menu {
   width: 100%; }
@@ -430,6 +440,7 @@ body.node-type-webform #block-system-main {
     padding: 10px 0; }
   .not-front #header {
     position: relative;
+    z-index: 2;
     width: 100%;
     max-width: 980px;
     padding: 0 10px;
@@ -770,6 +781,41 @@ body.node-type-webform #block-system-main {
 @media screen and (max-width: 960px) {
   .not-front #block-system-main {
     width: 98%; } }
+@media screen and (max-width: 910px) {
+  .js #headerwrap,
+  .js #primary-navigation,
+  .js #block-system-main-menu {
+    background: #28272f; }
+  .js #header,
+  .js #primary-navigation {
+    overflow: visible; }
+  .js #primary-navigation {
+    right: 0;
+    max-width: none; }
+  .js .mobile-menu-icon {
+    float: right;
+    display: block;
+    width: 30px;
+    margin-right: 10px;
+    font: 60px/1 entypo; }
+    .js .mobile-menu-icon:link, .js .mobile-menu-icon:visited, .js .mobile-menu-icon:hover, .js .mobile-menu-icon:active, .js .mobile-menu-icon:focus {
+      color: #fff; }
+    .js .mobile-menu-icon.open:link, .js .mobile-menu-icon.open:visited, .js .mobile-menu-icon.open:hover, .js .mobile-menu-icon.open:active, .js .mobile-menu-icon.open:focus {
+      color: #134ecf; }
+  .js .region-nav {
+    position: absolute;
+    top: 100%;
+    width: 100%; }
+    .js .region-nav #block-system-main-menu {
+      display: none; }
+    .js .region-nav #block-system-main-menu .menu li {
+      display: block;
+      width: 100%;
+      margin: 1rem 0;
+      text-align: center; }
+      .js .region-nav #block-system-main-menu .menu li a {
+        display: inline-block;
+        width: auto; } }
 @media screen and (max-width: 530px) {
   .region-footer .email-newsletter {
     float: left;
