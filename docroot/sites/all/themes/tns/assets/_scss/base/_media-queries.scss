@@ -29,6 +29,10 @@
 
 // MAX 910
 @media screen and (max-width: 910px) {
+  .not-front #logo {
+    width: 164px;
+  }
+  
   .js {
     #headerwrap,
     #primary-navigation,

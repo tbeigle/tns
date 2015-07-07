@@ -782,6 +782,9 @@ body.node-type-webform #block-system-main {
   .not-front #block-system-main {
     width: 98%; } }
 @media screen and (max-width: 910px) {
+  .not-front #logo {
+    width: 164px; }
+
   .js #headerwrap,
   .js #primary-navigation,
   .js #block-system-main-menu {
