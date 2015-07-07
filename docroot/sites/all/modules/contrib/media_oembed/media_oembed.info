@@ -10,9 +10,9 @@ files[] = includes/MediaInternetOEmbedHandler.inc
 
 configure = admin/config/media/media-oembed
 
-; Information added by Drupal.org packaging script on 2014-11-14
-version = "7.x-2.2"
+; Information added by Drupal.org packaging script on 2015-04-22
+version = "7.x-2.3"
 core = "7.x"
 project = "media_oembed"
-datestamp = "1415977981"
+datestamp = "1429728782"
 

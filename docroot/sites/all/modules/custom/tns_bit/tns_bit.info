@@ -1,0 +1,4 @@
+name = TNS Bandsintown
+description = Custom module to integrate with the Bandsintown API.
+package = TNS
+core = 7.x

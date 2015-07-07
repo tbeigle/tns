@@ -155,13 +155,6 @@
           width: 20%;
           margin-right: 2.0833%;
           
-          @media screen and (max-width: 530px) {
-            float: none;
-            clear: both;
-            width: 100%;
-            margin: 0 0 12px;
-          }
-          
           h2 {
             padding: 0;
             margin: 0;
@@ -181,10 +174,6 @@
         .block-content {
           float: left;
           width: 77.9167%;
-          
-          @media screen and (max-width: 530px) {
-            width: 100%;
-          }
           
           form > div > div {
             float: left;
@@ -209,39 +198,12 @@
               width: 12.4067%;
             }
           }
-          
-          @media screen and (max-width: 530px) {
-            float: none;
-            clear: both;
-            width: 100%;
-            
-            form > div > div {
-              &.name,
-              &.zip {
-                &-box {
-                  float: none;
-                  clear: both;
-                  width: 50%;
-                  margin: 0 0 6px;
-                }
-              }
-              
-              &.signup-box {
-                width: 60%;
-                margin-left: 0;
-              }
-              
-              &.form-actions {
-                width: 20%;
-              }
-            }
-          }
         }
         
         .element-invisible {
           display: none;
         }
-        
+        /*
         @include vendorizePlaceholder(font-family, 'Source Sans Pro');
         @include vendorizePlaceholder(font-size, 11px);
         @include vendorizePlaceholder(font-style, italic);
@@ -280,7 +242,7 @@
             @include hoverActiveFocus(background, #fff);
             @include hoverActiveFocus(color, $colLpSnUpBxBg);
           }
-        }
+        }*/
       }
     }
   }

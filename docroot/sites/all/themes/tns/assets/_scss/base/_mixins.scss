@@ -71,3 +71,17 @@
     #{$property}: $value;
   }
 }
+
+@mixin shortBorderHorizontal($bottom: false, $brdrcol: $colQuoteBorders) {
+  content: "";
+  display: block;
+  width: 50%;
+  max-width: 350px;
+  height: 4px;
+  background: $brdrcol;
+  margin: auto;
+  
+  @if $bottom {
+    margin-top: 1em;
+  }
+}

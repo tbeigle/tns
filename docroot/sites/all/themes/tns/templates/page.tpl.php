@@ -73,50 +73,58 @@
  */
 ?>
 
-<?php if ($page['nav']): ?>
-  <nav id="primary-navigation" class="container">
-    <?php print render($page['nav']); ?>
-  </nav>
-<?php endif; ?>
-
-<?php if ($logo): ?>
-  <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
-    <img src="<?php print $logo; ?>" alt="Logo for The New Schematics" />
-  </a>
-<?php endif; ?>
-
-<?php print render($page['header']); ?>
-
-<?php if ($breadcrumb): ?>
-  <!--
-  <div id="breadcrumb"><?php //print $breadcrumb; ?></div>
-  -->
-<?php endif; ?>
+<div id="headerwrap">
+  <div id="header">
+    <?php if ($logo): ?>
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" id="logo">
+        <img src="<?php print $logo; ?>" alt="Logo for The New Schematics" />
+      </a>
+    <?php endif; ?>
+    
+    <?php if ($page['nav']): ?>
+      <nav id="primary-navigation" class="container">
+        <?php print render($page['nav']); ?>
+      </nav>
+    <?php endif; ?>
+    
+    <?php print render($page['header']); ?>
+    
+    <?php if ($breadcrumb): ?>
+      <!--
+      <div id="breadcrumb"><?php //print $breadcrumb; ?></div>
+      -->
+    <?php endif; ?>
+  </div> <!-- /#header -->
+</div> <!-- /#headerwrap -->
 
 <?php print $messages; ?>
 
 <?php if ($page['highlighted']): ?><div id="highlighted"><?php print render($page['highlighted']); ?></div><?php endif; ?>
 <a id="main-content"></a>
 
-<?php print render($title_prefix); ?>
-<?php if ($title && $show_title): ?>
-  <h1 class="title" id="page-title"><?php print $title; ?></h1>
-<?php endif; ?>
-<?php print render($title_suffix); ?>
-
-<?php if ($tabs): ?>
-  <div class="tabs"><?php print render($tabs); ?></div>
-<?php endif; ?>
-
-<?php print render($page['help']); ?>
-
-<?php if ($action_links): ?>
-  <ul class="action-links"><?php print render($action_links); ?></ul>
-<?php endif; ?>
-
-<?php if ($page['content']): ?>
-  <?php print render($page['content']); ?>
-<?php endif; ?>
+<div id="contentwrap">
+  <?php print render($title_prefix); ?>
+  <?php if ($title && $show_title): ?>
+    <h1 class="title" id="page-title"><?php print $title; ?></h1>
+  <?php endif; ?>
+  <?php print render($title_suffix); ?>
+  
+  <?php if ($tabs): ?>
+    <div class="tabs"><?php print render($tabs); ?></div>
+  <?php endif; ?>
+  
+  <?php print render($page['help']); ?>
+  
+  <?php if ($action_links): ?>
+    <ul class="action-links"><?php print render($action_links); ?></ul>
+  <?php endif; ?>
+  
+  <div id="main-content">
+    <?php if ($page['content']): ?>
+      <?php print render($page['content']); ?>
+    <?php endif; ?>
+  </div> <!-- /#main-content -->
+</div> <!-- /#contentwrap -->
 
 <?php print $feed_icons; ?>
 
@@ -125,30 +133,13 @@
 <?php endif; ?>
 
 <?php if ($page['sidebar']): ?>
-  <?php print render ($page['sidebar']); ?>
+  <?php print render($page['sidebar']); ?>
 <?php endif; ?>
 
 <footer>
-  <ul class="social-media links-ul">
-    <li class="facebook">
-      <a href="//www.facebook.com/TheNewSchematics" target="_blank"><img src="<?php print $tns_path; ?>/assets/images/icon-facebook.png" alt="Facebook" title="Facebook"></a>
-    </li>
-    <li class="twitter">
-      <a href="//www.twitter.com/NewSchematics" target="_blank"><img src="<?php print $tns_path; ?>/assets/images/icon-twitter.png" alt="Twitter" title="Twitter"></a>
-    </li>
-    <li class="youtube">
-      <a href="//youtu.be/TQt65kaeEU0" target="_blank"><img src="<?php print $tns_path; ?>/assets/images/icon-youtube.png" alt="YouTube" title="YouTube"></a>
-    </li>
-    <li class="instagram">
-      <a href="//www.instagram.com/TheNewSchematics" target="_blank"><img src="<?php print $tns_path; ?>/assets/images/icon-instagram.png" alt="Instagram" title="Instagram"></a>
-    </li>
-    <li class="spotify">
-      <a href="//open.spotify.com/album/6BZfV8voWY1y0eD2tBPzTH" target="_blank"><img src="<?php print $tns_path; ?>/assets/images/icon-spotify.png" alt="Spotify" title="Spotify"></a>
-    </li>
-    <li class="itunes">
-      <a href="//ow.ly/Mwbyz" target="_blank"><img src="<?php print $tns_path; ?>/assets/images/icon-itunes.png" alt="iTunes" title="iTunes"></a>
-    </li>
-  </ul> <!-- /.social-media /.links-ul -->
+  <?php if ($page['footer_super']): ?>
+    <?php print render($page['footer_super']); ?>
+  <?php endif; ?>
   
   <?php if ($page['footer']): ?>
     <?php print render($page['footer']); ?>
