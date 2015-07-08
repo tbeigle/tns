@@ -99,3 +99,14 @@ function tns_preprocess_page(&$vars) {
 function _tns_path() {
   return url(drupal_get_path('theme', 'tns'), array('absolute' => TRUE));
 }
+
+/**
+ * Implements template_preprocess_views_view_field().
+ */
+function tns_preprocess_views_view_field(&$vars) {
+    if ($vars['field']->view->name == 'tns_media_videos') {
+    $video_file = file_load($vars['output']);
+    $video = file_view_file($video_file);
+    $vars['output'] = drupal_render($video);
+  }
+}

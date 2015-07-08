@@ -28,6 +28,7 @@ function tns_content_types_context_default_contexts() {
     'path' => array(
       'values' => array(
         'node/5' => 'node/5',
+        'node/13' => 'node/13',
       ),
     ),
   );

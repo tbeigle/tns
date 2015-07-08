@@ -38,7 +38,7 @@ function tns_tour_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'tns',
-        'weight' => 0,
+        'weight' => -12,
       ),
     ),
     'title' => '',
