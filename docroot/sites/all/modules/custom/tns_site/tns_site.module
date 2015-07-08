@@ -5,18 +5,6 @@
  * Custom functionality for The New Schematics' website.
  */
 
-/**
- * Implements hook_block_info().
- */
-function tns_site_block_info() {
-  $items = array();
-  
-  $items['social'] = array(
-    'info' => 'TNS Social Media Links',
-  );
-
-  return $items;
-}
 /*  
  * Implements hook_menu().
  */
@@ -51,6 +39,47 @@ function tns_site_menu() {
   return $items;
 }
 
+/*
+ * Page callback for admin/tns
+ */
+function tns_site_admin() {
+  $output = array();
+  
+  $output[] = array(
+    '#markup' => '<p>TBD</p>',
+  );
+  
+  return $output;
+}
+
+/**
+ * Form for the core settings page
+ */
+function tns_site_admin_settings($form, &$form_state) {
+  $form[] = array(
+    '#markup' => '<p>TBD</p>',
+  );
+  
+  return $form;
+}
+
+/**
+ * Implements hook_block_info().
+ */
+function tns_site_block_info() {
+  $items = array();
+  
+  $items['social'] = array(
+    'info' => 'TNS Social Media Links',
+  );
+  
+  $items['kickstarter'] = array(
+    'info' => 'TNS Kickstarter Button',
+  );
+
+  return $items;
+}
+
 /**
  * Implements hook_block_configure().
  */
@@ -76,6 +105,20 @@ function tns_site_block_configure($delta = '') {
           '#description' => t('If left blank, no link will display for this social media application.'),
         );
       }
+      
+      break;
+    }
+    case 'kickstarter': {
+      $url = _tns_site_kickstarter_url();
+      $var = 'tns_site_kickstarter_url';
+      
+      $edit[$var] = array(
+        '#type' => 'texfield',
+        '#title' => t('Kickstarter URL'),
+        '#default_value' => $url,
+      );
+      
+      break;
     }
   }
   
@@ -89,6 +132,11 @@ function tns_site_block_save($delta = '', $edit = array()) {
   switch ($delta) {
     case 'social': {
       if (!empty($edit['tns_site'])) variable_set('tns_site_social_links', $edit['tns_site']);
+      break;
+    }
+    case 'kickstarter': {
+      $var = 'tns_site_kickstarter_url';
+      if (isset($edit[$var])) variable_set($var, $edit[$var]);
       break;
     }
   }
@@ -142,33 +190,24 @@ function tns_site_block_view($delta = '') {
       
       break;
     }
+    
+    case 'kickstarter': {
+      $url = _tns_site_kickstarter_url();
+      if (empty($url)) break;
+      
+      $mod_path = drupal_get_path('module', 'tns_site');
+      $img_src = url($mod_path . '/images/kickstarter.png', array('#absolute' => TRUE));
+      $link_html = '<img src="' . $img_src . '" alt="Kickstarter Logo">' . t('Back The New Schematics\' Kickstarter Project');
+      
+      $block['content'] = array(
+        '#markup' => l($link_html, $url, array('html' => TRUE, 'attributes' => array('class' => array('kickstarter-button'), 'target' => '_blank'))),
+      );
+      
+      break;
+    }
   }
   
   return $block;
-}
-
-/*
- * Page callback for admin/tns
- */
-function tns_site_admin() {
-  $output = array();
-  
-  $output[] = array(
-    '#markup' => '<p>TBD</p>',
-  );
-  
-  return $output;
-}
-
-/**
- * Form for the core settings page
- */
-function tns_site_admin_settings($form, &$form_state) {
-  $form[] = array(
-    '#markup' => '<p>TBD</p>',
-  );
-  
-  return $form;
 }
 
 /**
@@ -214,6 +253,9 @@ function _tns_site_social_links() {
   return variable_get('tns_site_social_links', $defaults);
 }
 
+/**
+ * Helper function for formatting the social links variable titles
+ */
 function _tns_site_social_links_titles($social_links = array()) {
   if (empty($social_links)) $social_links = _tns_site_social_links();
   
@@ -230,4 +272,13 @@ function _tns_site_social_links_titles($social_links = array()) {
   }
   
   return $output;
+}
+
+/**
+ * Helper function for getting the social links variable data
+ */
+function _tns_site_kickstarter_url() {
+  $var = 'tns_site_kickstarter_url';
+  $default = 'https://www.kickstarter.com/projects/thenewschematics/the-new-schematics-debut-ep';
+  return variable_get($var, $default);
 }

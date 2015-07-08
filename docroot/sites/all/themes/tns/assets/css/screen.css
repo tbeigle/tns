@@ -71,7 +71,7 @@ img {
 .show-title #contentwrap {
   text-align: center;
   padding: 30px 10px 160px; }
-.show-title #main-content {
+.show-title #content {
   text-align: left; }
 
 a {
@@ -132,6 +132,18 @@ a {
         opacity: 1; }
       .item-list .social-media li a:hover img, .item-list .social-media li a:active img, .item-list .social-media li a:focus img {
         opacity: 0; }
+
+#block-tns-site-kickstarter {
+  position: absolute;
+  left: 70px;
+  bottom: 25%;
+  width: 300px; }
+
+.kickstarter-button {
+  font-size: 0;
+  line-height: 0; }
+  .kickstarter-button img {
+    display: block; }
 
 .mobile-menu-icon {
   display: none; }
@@ -779,6 +791,9 @@ body.node-type-webform #block-system-main {
 
 /* Misc
  * -----------------------------------------------------------------------------*/
+@media screen and (max-width: 1010px) and (min-width: 884px) {
+  .region-footer .email-newsletter input[type="submit"] {
+    font-size: 11px; } }
 @media screen and (max-width: 960px) {
   .not-front #block-system-main {
     width: 98%; } }
@@ -786,17 +801,24 @@ body.node-type-webform #block-system-main {
   .not-front #logo {
     width: 164px; }
 
-  .js #headerwrap,
-  .js #primary-navigation,
+  #block-tns-site-kickstarter {
+    width: 225px; }
+
   .js #block-system-main-menu {
-    background: #28272f; }
-  .js #header,
-  .js #primary-navigation {
-    overflow: visible; }
-  .js #primary-navigation {
-    right: 0;
-    max-width: none; }
+    z-index: 3; }
+    .js #block-system-main-menu .menu {
+      padding-top: 1rem; }
+      .js #block-system-main-menu .menu li {
+        width: 100%;
+        margin: 1rem 0;
+        text-align: center; }
+        .js #block-system-main-menu .menu li:first-child {
+          margin-top: 0; }
+        .js #block-system-main-menu .menu li a {
+          display: inline-block;
+          width: auto; }
   .js .mobile-menu-icon {
+    position: relative;
     float: right;
     display: block;
     width: 30px;
@@ -806,20 +828,35 @@ body.node-type-webform #block-system-main {
       color: #fff; }
     .js .mobile-menu-icon.open:link, .js .mobile-menu-icon.open:visited, .js .mobile-menu-icon.open:hover, .js .mobile-menu-icon.open:active, .js .mobile-menu-icon.open:focus {
       color: #134ecf; }
-  .js .region-nav {
+  .js .not-front #headerwrap,
+  .js .not-front #primary-navigation,
+  .js .not-front #block-system-main-menu {
+    background: #28272f; }
+  .js .not-front #header,
+  .js .not-front #primary-navigation {
+    overflow: visible; }
+  .js .not-front #primary-navigation {
+    right: 0;
+    max-width: none; }
+  .js .not-front .region-nav {
     position: absolute;
     top: 100%;
     width: 100%; }
-    .js .region-nav #block-system-main-menu {
-      display: none; }
-    .js .region-nav #block-system-main-menu .menu li {
-      display: block;
-      width: 100%;
-      margin: 1rem 0;
-      text-align: center; }
-      .js .region-nav #block-system-main-menu .menu li a {
-        display: inline-block;
-        width: auto; } }
+  .js .not-front #block-system-main-menu {
+    display: none; }
+  .js .front #block-system-main-menu {
+    left: auto;
+    right: 0;
+    top: 0;
+    bottom: auto; }
+    .js .front #block-system-main-menu .block-content > .menu {
+      position: relative;
+      z-index: 2;
+      display: none;
+      background: #28272f; }
+  .js .front .mobile-menu-icon {
+    z-index: 3;
+    margin-bottom: -60px; } }
 @media screen and (max-width: 883px) {
   .region-footer .email-newsletter {
     padding: 20px; }
@@ -837,17 +874,10 @@ body.node-type-webform #block-system-main {
       width: 70%; }
     .region-footer .email-newsletter .block-content form > div > div.form-actions {
       width: 28%; } }
-/*@media screen and (max-width: 760px) {
-  // Footer
-  .region-footer {
-    .email-newsletter {
-      clear: both;
-      float: none;
-      margin: 0;
-    }
-  }
-}*/
 @media screen and (max-width: 760px) {
+  #block-tns-site-kickstarter {
+    width: 200px; }
+
   .region-footer .email-newsletter {
     float: left;
     padding: 10px 10px;
@@ -887,5 +917,16 @@ body.node-type-webform #block-system-main {
     margin-left: 0; }
   .lp-001-bottom .email-newsletter .block-content form > div > div.form-actions {
     width: 20%; } }
+@media screen and (max-width: 560px) {
+  #block-tns-site-kickstarter {
+    bottom: 10px; } }
+@media screen and (max-width: 400px) {
+  .front #logo {
+    left: 10px;
+    top: 10px; }
+
+  #block-tns-site-kickstarter {
+    width: 150px;
+    left: 10px; } }
 
 /*# sourceMappingURL=screen.css.map */
