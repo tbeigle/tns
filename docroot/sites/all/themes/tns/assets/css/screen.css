@@ -878,6 +878,9 @@ body.node-type-webform #block-system-main {
   #block-tns-site-kickstarter {
     width: 200px; }
 
+  .tour #contentwrap {
+    background-size: auto 100%; }
+
   .region-footer .email-newsletter {
     float: left;
     padding: 10px 10px;
@@ -919,7 +922,34 @@ body.node-type-webform #block-system-main {
     width: 20%; } }
 @media screen and (max-width: 560px) {
   #block-tns-site-kickstarter {
-    bottom: 10px; } }
+    bottom: 10px; }
+
+  .tour .tour-dates {
+    font-size: 14px;
+    line-height: normal; }
+    .tour .tour-dates th, .tour .tour-dates td {
+      width: auto; }
+      .tour .tour-dates th:first-child, .tour .tour-dates th:nth-child(2), .tour .tour-dates th:nth-child(3)
+      .tour .tour-dates th:last-child, .tour .tour-dates td:first-child, .tour .tour-dates td:nth-child(2), .tour .tour-dates td:nth-child(3)
+      .tour .tour-dates th:last-child, .tour .tour-dates th:nth-child(3)
+      .tour .tour-dates td:last-child, .tour .tour-dates td:nth-child(3)
+      .tour .tour-dates td:last-child {
+        width: auto; }
+
+  .press--list__image, .press--list__title, .press--list__body {
+    float: none;
+    clear: both;
+    width: 100%; }
+  .press--list__image {
+    max-width: none;
+    margin-bottom: 1rem;
+    text-align: center; }
+    .press--list__image img {
+      width: auto; }
+  .press--list__title, .press--list__body {
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto; } }
 @media screen and (max-width: 400px) {
   .front #logo {
     left: 10px;
@@ -927,6 +957,9 @@ body.node-type-webform #block-system-main {
 
   #block-tns-site-kickstarter {
     width: 150px;
-    left: 10px; } }
+    left: 10px; }
+
+  .tour .tour-dates {
+    font-size: 12px; } }
 
 /*# sourceMappingURL=screen.css.map */

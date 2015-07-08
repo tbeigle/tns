@@ -22,6 +22,7 @@ regions[footer] = Footer
 
 ; SCRIPTS
 scripts[] = assets/js/tns.js
+scripts[] = assets/js/tns-front-ajax.js
 
 ; SETTINGS - TOGGLE
 settings[toggle_logo] = 0

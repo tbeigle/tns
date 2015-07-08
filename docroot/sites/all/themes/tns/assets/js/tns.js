@@ -62,6 +62,10 @@
         footerHeight = $footer.height();
         positionFooter();
         positionHeaderMenu();
+        
+        if ($(window).width() > mobileWidth) {
+          $('#block-system-main-menu, #block-system-main-menu .block-content > .menu').show();
+        }
       });
       
       // Add the mobile menu link to the main menu
@@ -76,8 +80,6 @@
       $('.mobile-menu-icon').click(function(e) {
         e.preventDefault();
         var $this = $(this);
-        
-        //$('body').toggleClass('mobile-open');
         
         var $target = isFront ? $($this.attr('data-target')) : $($this.attr('href'));
         
