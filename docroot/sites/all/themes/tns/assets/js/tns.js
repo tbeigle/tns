@@ -93,6 +93,19 @@
           }
         });
       });
+      
+      // Sliders
+      $(document).ready(function() {
+        $('.video-gallery.bxslider').bxSlider({
+          video: true,
+          infiniteLoop: false,
+          hideControlOnEnd: true
+        });
+        $('.image-slider.bxslider').bxSlider({
+          hideControlOnEnd: true,
+          adaptiveHeight: true
+        });
+      });
     }
   }
 })(jQuery);

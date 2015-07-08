@@ -631,6 +631,12 @@ body.node-type-webform #block-system-main {
   .block.recent-press {
     left: auto;
     margin: 0; } }
+#block-views-tns-media-videos-block, #block-views-tns-media-images-block {
+  width: 100%;
+  max-width: 760px;
+  padding: 0 10px;
+  margin: auto; }
+
 .lp-001 #logo {
   max-width: 321px;
   margin: 0 auto 50px; }

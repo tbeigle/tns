@@ -21,6 +21,8 @@ regions[footer_super] = Super Footer
 regions[footer] = Footer
 
 ; SCRIPTS
+scripts[] = assets/vendor/modernizr.custom.10409.js
+scripts[] = assets/vendor/jquery.bxslider/jquery.bxslider.min.js
 scripts[] = assets/js/tns.js
 scripts[] = assets/js/tns-front-ajax.js
 
@@ -32,4 +34,5 @@ settings[toggle_main_menu] = 0
 settings[toggle_secondary_menu] = 0
 
 ; STYLESHEETS
+stylesheets[all][] = assets/vendor/jquery.bxslider/jquery.bxslider.css
 stylesheets[all][] = assets/css/screen.css

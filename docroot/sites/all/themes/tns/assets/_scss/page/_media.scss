@@ -1,0 +1,9 @@
+#block-views-tns-media {
+  &-videos-block,
+  &-images-block {
+    width: 100%;
+    max-width: 760px;
+    padding: 0 10px;
+    margin: auto;
+  }
+}

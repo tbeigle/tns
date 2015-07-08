@@ -38,7 +38,7 @@ function tns_press_default_fe_block_settings() {
         'region' => 'content',
         'status' => 1,
         'theme' => 'tns',
-        'weight' => 0,
+        'weight' => -13,
       ),
     ),
     'title' => '',
