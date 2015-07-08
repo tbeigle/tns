@@ -119,3 +119,52 @@ a {
   @include hoverActiveFocus(background, #fff);
   @include hoverActiveFocus(color, $orange1);
 }
+
+.item-list .social-media {
+  width: 100%;
+  background: #000;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  
+  li {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    margin: 0 16px 0 0;
+    
+    &.facebook {
+      margin-right: 20px;
+    }
+    
+    &.instagram {
+      margin-right: 12px;
+    }
+    
+    &.itunes,
+    &:last-child {
+      margin-right: 0;
+    }
+    
+    a {
+      position: relative;
+      display: block;
+      @include linkTextOffscreen();
+      
+      img {
+        display: block;
+        opacity: 1;
+      }
+      
+      &:hover,
+      &:active,
+      &:focus {
+        img {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
