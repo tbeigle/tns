@@ -1,6 +1,7 @@
 (function($) {
   Drupal.behaviors.tns = {
     attach: function(context, settings) {
+      var isFront = $('body').hasClass('front');
       var $socialMedia = $("ul.social-media");
       var $footer = $("div.region-footer");
       var footerPosition = $socialMedia.offset().top + $socialMedia.outerHeight() - $(window).scrollTop();
@@ -8,7 +9,6 @@
       var windowHeight = $(window).height();
       var footerFixed = false;
       var headerHeight = $("div#headerwrap").height();
-      var $navWrap = $('#primary-navigation');
       var $headerMenu = $("#block-system-main-menu");
       var menuMargin;
       var $headerLogo = $("#logo");
@@ -29,7 +29,14 @@
       }
       
       function positionHeaderMenu() {
-	      if ($(window).width() < $headerLogo.outerWidth(true) + $headerMenu.outerWidth(true)) {
+        if (isFront) return;
+        if ($(window).width() < mobileWidth) {
+          $headerMenu.css({
+            marginTop: 0,
+            float: "none"
+          });
+        }
+	      else if ($(window).width() < $headerLogo.outerWidth(true) + $headerMenu.outerWidth(true)) {
 	        $headerMenu.css({
   	        marginTop: "10px",
   	        float: "left"  	        
@@ -55,16 +62,36 @@
         footerHeight = $footer.height();
         positionFooter();
         positionHeaderMenu();
+        
+        if ($(window).width() > mobileWidth) {
+          $('#block-system-main-menu, #block-system-main-menu .block-content > .menu').show();
+        }
       });
       
       // Add the mobile menu link to the main menu
-      $navWrap.prepend('<a href="#block-system-main-menu" class="mobile-menu-icon" title="Click/tap to open the main menu">i</a>');
+      var $mobileNavButton = '<a href="#block-system-main-menu" class="mobile-menu-icon" title="Click/tap to open the main menu" data-target="#block-system-main-menu .block-content > .menu">i</a>';
+      if (isFront) {
+        $headerMenu.prepend($mobileNavButton);
+      }
+      else {
+        $('#primary-navigation').prepend($mobileNavButton);
+      }
+      
       $('.mobile-menu-icon').click(function(e) {
         e.preventDefault();
+        var $this = $(this);
         
-        var $target = $($(this).attr('href'));
-        $target.slideToggle('fast');
-        $(this).toggleClass('open');
+        var $target = isFront ? $($this.attr('data-target')) : $($this.attr('href'));
+        
+        $this.toggleClass('open');
+        if (isFront && $this.hasClass('open')) {
+          $('#logo').hide();
+        }
+        $target.slideToggle('fast', function() {
+          if (isFront && !$this.hasClass('open')) {
+            $('#logo').show();
+          }
+        });
       });
     }
   }

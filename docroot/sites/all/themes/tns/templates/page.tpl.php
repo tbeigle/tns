@@ -119,7 +119,7 @@
     <ul class="action-links"><?php print render($action_links); ?></ul>
   <?php endif; ?>
   
-  <div id="main-content">
+  <div id="content">
     <?php if ($page['content']): ?>
       <?php print render($page['content']); ?>
     <?php endif; ?>

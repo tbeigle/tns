@@ -90,7 +90,7 @@ img {
     padding: 30px 10px 160px;
   }
   
-  #main-content {
+  #content {
     text-align: left;
   }
 }
@@ -166,5 +166,20 @@ a {
         }
       }
     }
+  }
+}
+
+#block-tns-site-kickstarter {
+  position: absolute;
+  left: 70px;
+  bottom: 25%;
+  width: 300px;
+}
+
+.kickstarter-button {
+  @include noText();
+  
+  img {
+    display: block;
   }
 }
