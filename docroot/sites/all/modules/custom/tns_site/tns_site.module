@@ -76,6 +76,10 @@ function tns_site_block_info() {
   $items['kickstarter'] = array(
     'info' => 'TNS Kickstarter Button',
   );
+  
+  $items['breakdown'] = array(
+    'info' => 'Breakdown Single Announcement',
+  );
 
   return $items;
 }
@@ -201,6 +205,18 @@ function tns_site_block_view($delta = '') {
       
       $block['content'] = array(
         '#markup' => l($link_html, $url, array('html' => TRUE, 'attributes' => array('class' => array('kickstarter-button'), 'target' => '_blank'))),
+      );
+      
+      break;
+    }
+    
+    case 'breakdown': {
+      $mod_path = drupal_get_path('module', 'tns_site');
+      $img_src = url($mod_path . '/images/breakdown-single-text.png', array('#absolute' => TRUE));
+      $link_html = '<img src="' . $img_src . '" alt="New single THE BREAKDOWN out now! Debut EP due 10/2">';
+      
+      $block['content'] = array(
+        '#markup' => l($link_html, 'http://ow.ly/QCrhF', array('html' => TRUE, 'attributes' => array('class' => array('breakdown-single-link'), 'target' => '_blank'))),
       );
       
       break;

@@ -30,4 +30,18 @@
       display: block;
     }
   }
+  
+  .breakdown-release-announcement {
+    position: absolute;
+    right: 3.3333%;
+    top: 25px;
+    width: 27.4166%;
+    min-width: 110px;
+    
+    .content {
+      a, img {
+        display: block;
+      }
+    }
+  }
 }
