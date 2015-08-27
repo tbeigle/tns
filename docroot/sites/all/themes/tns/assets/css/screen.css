@@ -544,7 +544,8 @@ body.node-type-webform #block-system-main {
   background-image: url(../images/bg-tour.jpg);
   background-position: center top;
   background-repeat: no-repeat;
-  background-size: 100% auto; }
+  background-size: 100% auto;
+  background-attachment: fixed; }
 .tour .tour-dates {
   font-size: 16px; }
   .tour .tour-dates table {
@@ -805,6 +806,10 @@ body.node-type-webform #block-system-main {
 
 /* Misc
  * -----------------------------------------------------------------------------*/
+@media screen and (max-width: 1295px) {
+  .tour #contentwrap {
+    background-size: auto 100%;
+    background-attachment: scroll; } }
 @media screen and (max-width: 1010px) and (min-width: 884px) {
   .region-footer .email-newsletter input[type="submit"] {
     font-size: 11px; } }
