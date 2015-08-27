@@ -1,3 +1,15 @@
+// Max 1295
+@media screen and (max-width: 1295px) {
+  .tour {
+    #contentwrap {
+      background: {
+        size: auto 100%;
+        attachment: scroll;
+      }
+    }
+  }
+}
+
 // MAX 1010
 @media screen and (max-width: 1010px) and (min-width: 884px) {
   .region-footer .email-newsletter input[type="submit"] {
