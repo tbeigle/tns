@@ -80,6 +80,10 @@ function tns_site_block_info() {
   $items['breakdown'] = array(
     'info' => 'Breakdown Single Announcement',
   );
+  
+  $items['october2015ep'] = array(
+    'info' => 'October 2015 EP',
+  );
 
   return $items;
 }
@@ -154,10 +158,10 @@ function tns_site_block_view($delta = '') {
     'subject' => '',
     'content' => '',
   );
+  $mod_path = drupal_get_path('module', 'tns_site');
   
   switch ($delta) {
     case 'social': {
-      $mod_path = drupal_get_path('module', 'tns_site');
       drupal_add_css($mod_path . '/css/tns-site.css');
       $mod_img_path = $mod_path . '/images/';
       $img_path = $mod_img_path . 'icon-';
@@ -199,7 +203,6 @@ function tns_site_block_view($delta = '') {
       $url = _tns_site_kickstarter_url();
       if (empty($url)) break;
       
-      $mod_path = drupal_get_path('module', 'tns_site');
       $img_src = url($mod_path . '/images/kickstarter.png', array('#absolute' => TRUE));
       $link_html = '<img src="' . $img_src . '" alt="Kickstarter Logo">' . t('Back The New Schematics\' Kickstarter Project');
       
@@ -211,13 +214,60 @@ function tns_site_block_view($delta = '') {
     }
     
     case 'breakdown': {
-      $mod_path = drupal_get_path('module', 'tns_site');
       $img_src = url($mod_path . '/images/breakdown-single-text.png', array('#absolute' => TRUE));
       $link_html = '<img src="' . $img_src . '" alt="New single THE BREAKDOWN out now! Debut EP due 10/2">';
       
       $block['content'] = array(
         '#markup' => l($link_html, 'http://ow.ly/QCrhF', array('html' => TRUE, 'attributes' => array('class' => array('breakdown-single-link'), 'target' => '_blank'))),
       );
+      
+      break;
+    }
+    
+    case 'october2015ep': {
+      $img_src = url($mod_path . '/images/20151005-bg-tv.jpg', array('#absolute' => TRUE));
+      $block['content'] = array();
+      
+      $block['content'][] = array(
+        '#markup' => '<img src="' . $img_src . '" class="debut-ep-tv" alt="A small television set displaying the logo for The New Schematics.">',
+        '#prefix' => '<div class="hide-text debut-ep-img">',
+        '#suffix' => 'The New Schematics</div>',
+      );
+      
+      $block['content']['music_links'] = array(
+        '#theme' => 'item_list',
+        '#title' => '',
+        '#type' => 'ul',
+        '#attributes' => array(),
+        '#items' => array(),
+        '#prefix' => '<div class="debut-ep-overlay"><p>' . t('Debut EP') . '</p>',
+        '#suffix' => '<p>' . t('Now Available') . '</p></div>',
+      );
+      
+      $items = array(
+        'iTunes' => 'https://itunes.apple.com/us/album/the-new-schematics-ep/id1040311337',
+        'Spotify' => 'http://open.spotify.com/album/5DTNcglPrATlPTZxN96UWF',
+        'Amazon' => 'http://amzn.com/B015GR5R90',
+        'Google' => 'https://play.google.com/store/music/album/The_New_Schematics_The_New_Schematics?id=Bmtarvedake456ukqru4bbovcue',
+      );
+      
+      foreach ($items as $item => $url) {
+        $img = '<img src="' . url($mod_path . '/images/icon-debut-ep-' . strtolower($item) . '.png', array('#absolute' => TRUE)) . '" alt="' . $item . '">';
+        
+        $options = array();
+        $options['attributes'] = array(
+          'target' => '_blank',
+          'class' => array(
+            'debut-ep-music-link',
+            strtolower($item),
+            'hide-text',
+          ),
+        );
+        
+        $options['html'] = TRUE;
+        
+        $block['content']['music_links']['#items'][] = l($img . $item, $url, $options);
+      }
       
       break;
     }

@@ -183,3 +183,7 @@ a {
     display: block;
   }
 }
+
+.hide-text {
+  @include noText();
+}

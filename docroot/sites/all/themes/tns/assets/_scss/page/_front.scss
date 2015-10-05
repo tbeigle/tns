@@ -4,6 +4,8 @@
     left: 70px;
     top: 70px;
     z-index: 2;
+    // Debut EP banner
+    display: none;
   }
   
   #page-title {
@@ -41,6 +43,113 @@
     .content {
       a, img {
         display: block;
+      }
+    }
+  }
+  
+  #block-tns-site-october2015ep {
+    position: relative;
+    width: 100%;
+    padding-bottom: 14px;
+    overflow: hidden;
+    text-align: center;
+  }
+  
+  .debut-ep {
+    &-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 800px;
+      display: inline-block;
+    }
+    
+    &-tv {
+      display: inline-block;
+    }
+    
+    &-overlay {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      top: 8.4%;
+      width: 100%;
+      text-align: center;
+      
+      p {
+        margin: 0;
+        text-transform: uppercase;
+        font: {
+          size: 33px;
+          family: "HelveticaNeue-CondensedBold", "Helvetica Neue", sans-serif;
+        }
+      }
+      
+      .item-list ul {
+        margin: 0;
+        padding: 0;
+        
+        @include noText();
+        
+        li {
+          list-style: none;
+          display: inline-block;
+          margin: 0 0 0 8px;
+          
+          &:first-child {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+    
+    &-music-link {
+      display: block;
+      
+      img {
+        display: block;
+      }
+      
+      &.itunes,
+      &.google {
+        padding-top: 2px;
+      }
+      
+      &.itunes {
+        width: 42px;
+      }
+      
+      &.spotify {
+        width: 51px;
+      }
+      
+      &.amazon {
+        width: 46px;
+      }
+      
+      &.google {
+        width: 32px;
+      }
+    }
+  }
+  
+  // For the debut EP
+  #block-system-main-menu {
+    z-index: 3;
+    
+    .content {
+      .menu {
+        .leaf {
+          a {
+            @media (min-width: 911px) {
+              @include linkAllStates(color, #000);
+              @include hoverActiveFocus(border-color, #000);
+              &.active {
+                border-color: #000;
+              }
+            }
+          }
+        }
       }
     }
   }
