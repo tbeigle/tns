@@ -12,6 +12,39 @@ function tns_front_default_fe_block_settings() {
 
   $export['version'] = '2.0';
 
+  $export['tns_site-breakdown'] = array(
+    'cache' => 1,
+    'css_class' => 'breakdown-release-announcement',
+    'custom' => 0,
+    'delta' => 'breakdown',
+    'module' => 'tns_site',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'tns' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'tns',
+        'weight' => 0,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
   $export['tns_site-kickstarter'] = array(
     'cache' => 1,
     'css_class' => '',
@@ -35,10 +68,43 @@ function tns_front_default_fe_block_settings() {
         'weight' => 0,
       ),
       'tns' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'tns',
+        'weight' => -14,
+      ),
+    ),
+    'title' => '',
+    'visibility' => 1,
+  );
+
+  $export['tns_site-october2015ep'] = array(
+    'cache' => 1,
+    'css_class' => '',
+    'custom' => 0,
+    'delta' => 'october2015ep',
+    'module' => 'tns_site',
+    'node_types' => array(),
+    'pages' => '<front>',
+    'roles' => array(),
+    'themes' => array(
+      'bartik' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'bartik',
+        'weight' => 0,
+      ),
+      'seven' => array(
+        'region' => '',
+        'status' => 0,
+        'theme' => 'seven',
+        'weight' => 0,
+      ),
+      'tns' => array(
         'region' => 'content',
         'status' => 1,
         'theme' => 'tns',
-        'weight' => -14,
+        'weight' => 0,
       ),
     ),
     'title' => '',
