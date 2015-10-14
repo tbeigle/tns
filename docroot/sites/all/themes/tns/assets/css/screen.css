@@ -873,8 +873,8 @@ body.node-type-webform #block-system-main {
  * -----------------------------------------------------------------------------*/
 @media screen and (max-width: 1295px) {
   .tour #contentwrap {
-    background-size: auto 100%;
-    background-attachment: scroll; } }
+    background-attachment: scroll;
+    background-color: #000; } }
 @media screen and (max-width: 1010px) and (min-width: 884px) {
   .region-footer .email-newsletter input[type="submit"] {
     font-size: 11px; } }
